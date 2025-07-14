@@ -1,0 +1,41 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // === Toggle Sidebar ===
+  const sidebarToggle = document.querySelector("#sidebarToggle");
+  const sidebar = document.querySelector("aside");
+
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("collapsed");
+    });
+  }
+
+  // === Dark/Light Mode Toggle ===
+  const themeToggle = document.querySelector("#themeToggle");
+
+  // Apply saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.classList.toggle("dark", savedTheme === "dark");
+  }
+
+  // Toggle handler
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
+  // === Responsive behavior ===
+  function checkViewport() {
+    if (window.innerWidth < 768) {
+      sidebar?.classList.add("collapsed");
+    } else {
+      sidebar?.classList.remove("collapsed");
+    }
+  }
+
+  window.addEventListener("resize", checkViewport);
+  checkViewport(); // run once on load
+});
