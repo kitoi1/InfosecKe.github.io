@@ -1,7 +1,12 @@
 <?php
+// logout.php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-  header('Location: login.html');
-  exit();
-}
+
+// Destroy all session data
+session_unset();
+session_destroy();
+
+// Redirect to logout confirmation page
+header("Location: account/logout.html");
+exit();
 ?>
