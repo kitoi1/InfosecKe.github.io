@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Security – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Learn</h2>
+      <ul>
+        <li><a href="basics.html">Cybersecurity Basics</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="protocols.html">Protocols</a></li>
+        <li><a href="encryption.html">Encryption</a></li>
+        <li><a href="web-security.html">Web Security</a></li>
+        <li><a href="cloud-security.html" class="active">Cloud Security</a></li>
+      </ul>
+      <button id="themeToggle">🌓 Theme</button>
+    </aside>
+
+    <div class="content">
+      <header>
+        <h1>Cloud Security Essentials</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/team.html">Team</a></li>
+            <li><a href="../support/contact.html">Support</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>As businesses migrate to cloud platforms like AWS, Azure, and Google Cloud, securing these environments has become crucial. Cloud security involves strategies and tools to protect data, applications, and infrastructure hosted in the cloud.</p>
+
+          <img src="../assets/images/learn/cloud-security-diagram.png" alt="Cloud Security Diagram" style="width:100%; margin:20px 0; border-radius:8px;"/>
+
+          <h2>☁️ Why Cloud Security Matters</h2>
+          <ul>
+            <li>Growing use of remote infrastructure and collaboration tools</li>
+            <li>Shared responsibility between cloud provider and customer</li>
+            <li>High-value data often resides in the cloud</li>
+            <li>Frequent misconfigurations cause major breaches</li>
+          </ul>
+
+          <h2>🔐 Cloud Security Best Practices</h2>
+          <ol>
+            <li><strong>Identity & Access Management (IAM):</strong> Enforce least privilege and MFA.</li>
+            <li><strong>Encryption:</strong> Encrypt data at rest and in transit.</li>
+            <li><strong>Backups:</strong> Maintain secure, offline, and automated backups.</li>
+            <li><strong>Network Controls:</strong> Use VPCs, firewalls, and security groups.</li>
+            <li><strong>Logging & Monitoring:</strong> Enable CloudTrail, GuardDuty, etc.</li>
+            <li><strong>Patch Management:</strong> Regularly update OS, containers, and services.</li>
+          </ol>
+
+          <h2>🧠 Real Cloud Incidents</h2>
+          <ul>
+            <li><strong>Capital One (2019):</strong> Misconfigured AWS WAF exposed 100M+ user records.</li>
+            <li><strong>Accenture (2021):</strong> Cloud storage misconfig leaked sensitive internal data.</li>
+            <li><strong>Facebook:</strong> Public Amazon S3 bucket exposed 540M user records.</li>
+          </ul>
+
+          <h2>🎥 Watch: Cloud Security Fundamentals</h2>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/nwqkqfKav_c" title="Cloud Security 101" frameborder="0" allowfullscreen></iframe>
+
+          <h2>🔧 Tools & Resources</h2>
+          <ul>
+            <li><a href="https://www.cloudsploit.com/" target="_blank">CloudSploit</a> – Open-source cloud misconfiguration scanner</li>
+            <li><a href="https://github.com/toniblyx/prowler" target="_blank">Prowler</a> – AWS security auditing tool</li>
+            <li><a href="https://aws.amazon.com/security/" target="_blank">AWS Security Hub</a></li>
+            <li><a href="https://cloudsecurityalliance.org/" target="_blank">Cloud Security Alliance (CSA)</a></li>
+            <li><a href="https://www.prismacloud.io/" target="_blank">Prisma Cloud by Palo Alto</a></li>
+          </ul>
+
+          <h2>📚 Learn & Practice</h2>
+          <ul>
+            <li><a href="https://cloudacademy.com" target="_blank">Cloud Academy</a></li>
+            <li><a href="https://tryhackme.com/path/outline/cloud" target="_blank">TryHackMe Cloud Path</a></li>
+            <li><a href="https://cisa.gov" target="_blank">CISA Cloud Security Guidance</a></li>
+          </ul>
+
+          <h2>🧪 Mini Lab Idea</h2>
+          <p>Try misconfiguring an S3 bucket in a local test environment and then use <code>aws-cli</code> and <code>Prowler</code> to detect the issues.</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

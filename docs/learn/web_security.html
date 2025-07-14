@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Security – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Learn</h2>
+      <ul>
+        <li><a href="basics.html">Cybersecurity Basics</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="protocols.html">Protocols</a></li>
+        <li><a href="encryption.html">Encryption</a></li>
+        <li><a href="web-security.html" class="active">Web Security</a></li>
+      </ul>
+      <button id="themeToggle">🌓 Theme</button>
+    </aside>
+
+    <div class="content">
+      <header>
+        <h1>Web Application Security</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/team.html">Team</a></li>
+            <li><a href="../support/contact.html">Support</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>Web application security focuses on protecting websites and web services from cyber threats and data breaches. As the internet grows, so do the risks—making web security essential for businesses, developers, and users.</p>
+
+          <img src="../assets/images/learn/web-security-cover.jpg" alt="Web Security" style="width:100%; border-radius:6px; margin:20px 0;" />
+
+          <h2>🔍 Common Web Threats (OWASP Top 10)</h2>
+          <ol>
+            <li><strong>Injection:</strong> SQL, NoSQL, Command injections (e.g., `'; DROP TABLE users; --`).</li>
+            <li><strong>Broken Authentication:</strong> Poor session management or password handling.</li>
+            <li><strong>Sensitive Data Exposure:</strong> Unencrypted or misconfigured storage of PII.</li>
+            <li><strong>XML External Entities (XXE):</strong> Attacks using XML parsers.</li>
+            <li><strong>Broken Access Control:</strong> Users gaining access to unauthorized data.</li>
+            <li><strong>Security Misconfiguration:</strong> Open ports, outdated software, default creds.</li>
+            <li><strong>XSS (Cross-Site Scripting):</strong> Injection of scripts into trusted sites.</li>
+            <li><strong>Insecure Deserialization:</strong> Manipulating serialized objects.</li>
+            <li><strong>Using Components with Known Vulnerabilities:</strong> Outdated plugins, libraries.</li>
+            <li><strong>Insufficient Logging & Monitoring:</strong> No alerts or visibility into attacks.</li>
+          </ol>
+
+          <h2>💡 Real-World Breaches</h2>
+          <ul>
+            <li><strong>Equifax:</strong> A patchable Apache Struts vulnerability exposed 147 million records.</li>
+            <li><strong>Yahoo:</strong> Cross-site scripting and poor encryption led to historic breaches.</li>
+            <li><strong>Kenya Revenue Authority (KRA):</strong> Once affected by form injection flaws in their portal.</li>
+          </ul>
+
+          <h2>🎥 Watch: OWASP Top 10 Explained</h2>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/LLtrnPfo0MA" title="OWASP Top 10 Web Vulnerabilities Explained" frameborder="0" allowfullscreen></iframe>
+
+          <h2>🔧 Tools You Can Learn & Use</h2>
+          <ul>
+            <li><a href="https://portswigger.net/burp" target="_blank">Burp Suite</a> – Intercept, modify and scan web traffic.</li>
+            <li><a href="https://owasp.org/www-project-zap/" target="_blank">OWASP ZAP</a> – Automated web app scanner.</li>
+            <li><a href="https://www.hacksplaining.com" target="_blank">Hacksplaining</a> – Learn vulnerabilities interactively.</li>
+            <li><a href="https://tryhackme.com" target="_blank">TryHackMe Labs</a> – Practical hacking labs.</li>
+            <li><a href="https://xsshunter.com" target="_blank">XSSHunter</a> – Advanced XSS discovery.</li>
+          </ul>
+
+          <h2>🧪 Hands-on Practice</h2>
+          <ul>
+            <li><a href="https://portswigger.net/web-security" target="_blank">Web Security Academy</a> – 100+ labs on web security topics.</li>
+            <li><a href="https://github.com/vulhub/vulhub" target="_blank">Vulhub</a> – Collection of prebuilt vulnerable Docker environments.</li>
+          </ul>
+
+          <h2>📘 Further Reading</h2>
+          <ul>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10 Project</a></li>
+            <li><a href="https://www.acunetix.com/blog/articles/what-is-web-application-security/" target="_blank">Acunetix: Web App Security Guide</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
