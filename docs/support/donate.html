@@ -3,10 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Support InfoSecKe – Make a Donation</title>
+  <title>Donate to InfoSecKe – Support Our Cyber Mission</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Header (PortSwigger-style) -->
+  <header class="page-header" id="top">
+    <div class="container">
+      <a class="logo" href="/"><img src="../assets/images/logo.png" alt="InfoSecKe Logo" height="40" /></a>
+      <div class="header-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="avatar-dropdown">
+          <img src="../assets/images/avatar.png" alt="User Avatar">
+          <div class="dropdown-content">
+            <a href="../account/profile.html">Profile</a>
+            <a href="../account/settings.html">Settings</a>
+            <a href="../account/logout.html">Logout</a>
+            <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Layout -->
+  <div class="layout">
+    <div class="content">
+      <header>
+        <h1>Support InfoSecKe – Make a Donation</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/mission.html">About</a></li>
+            <li><a href="../support/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>Your donation helps InfoSecKe continue delivering free cybersecurity education, organizing CTFs, publishing learning tools, and supporting digital safety across Africa. Whether you're giving KES 100 or more, you're making a difference.</p>
+
+          <h2>💳 Quick Donation Options</h2>
+          <ul>
+            <li><strong>MPESA:</strong> Paybill: <code>404040</code>, Account: <code>INFOSECKE</code></li>
+            <li><strong>Bank Transfer:</strong> InfoSecKe Foundation, Equity Bank, A/C: <code>1234567890</code></li>
+            <li><strong>PayPal:</strong> <a href="https://paypal.me/infosecke" target="_blank">paypal.me/infosecke</a></li>
+          </ul>
+
+          <h2>🎯 Why Donate?</h2>
+          <ul>
+            <li>🌍 Expand our reach to rural schools and communities</li>
+            <li>🧪 Support development of new hands-on labs and simulators</li>
+            <li>🎓 Provide scholarships for underrepresented learners</li>
+            <li>💻 Host secure cloud platforms for training and CTFs</li>
+            <li>📰 Fund newsletters, research reports, and awareness campaigns</li>
+          </ul>
+
+          <h2>🙌 Become a Sponsor</h2>
+          <p>Are you an individual, organization, or company interested in long-term sponsorship or collaboration? Email <a href="mailto:support@infosecke.org">support@infosecke.org</a> to get started or visit our <a href="../community/sponsors.html">Sponsors</a> page.</p>
+
+          <h2>💌 Thank You Notes</h2>
+          <p>All donors receive a personalized digital thank-you badge and shoutout (unless you choose to remain anonymous).</p>
+
+          <h2>📜 Transparency</h2>
+          <p>We publish quarterly impact reports detailing how your contributions are used. Visit our <a href="status.html">Donation Status</a> page to learn more.</p>
+
+          <h2>📥 Custom Donations</h2>
+          <form>
+            <label for="amount">Amount (KES):</label>
+            <input type="number" id="amount" name="amount" required>
+            <label for="name">Your Name (optional):</label>
+            <input type="text" id="name" name="name">
+            <button type="submit">Donate Now</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- Footer (PortSwigger-style layout) -->
+      <footer class="wrapper">
+        <div class="container">
+          <div>
+            <p>Initiatives</p>
+            <a href="../community/events.html">Cybersecurity Events</a>
+            <a href="../training/ctf.html">CTF Competitions</a>
+            <a href="../training/labs.html">Practice Labs</a>
+          </div>
+          <div>
+            <p>Resources</p>
+            <a href="../resources.html">Guides</a>
+            <a href="../tools.html">Free Tools</a>
+            <a href="../blog.html">Blog</a>
+          </div>
+          <div>
+            <p>Support</p>
+            <a href="donate.html">Donate</a>
+            <a href="status.html">Impact Reports</a>
+            <a href="report.html">Bug Reporting</a>
+          </div>
+          <div>
+            <p>About</p>
+            <a href="../about/mission.html">Our Mission</a>
+            <a href="../about/team.html">Team</a>
+            <a href="../support/contact.html">Contact</a>
+            <a href="../legal/privacy.html">Privacy</a>
+          </div>
+          <div>
+            <a href="/"><img src="../assets/images/logo.png" alt="InfoSecKe Logo" class="footer-logo" /></a>
+            <a class="button-outline-blue-small" href="https://twitter.com/infosec_ke" target="_blank">🐦 Follow us</a>
+            <p class="grey">&copy; 2025 InfoSecKe Initiative</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Dark Mode Logic -->
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
@@ -18,112 +133,5 @@
       }
     };
   </script>
-</head>
-<body>
-  <header class="page-header" id="top">
-    <div class="container">
-      <a class="logo" href="../index.html"><img src="../assets/images/logo.png" alt="InfoSecKe Logo" height="40"/></a>
-      <div class="header-right">
-        <nav class="hamburger-menu-desktop">
-          <a class="hamburger-menu-desktop-link" href="../about/mission.html">About</a>
-          <a class="hamburger-menu-desktop-link" href="../community/community.html">Community</a>
-          <a class="hamburger-menu-desktop-link" href="../training/labs.html">Labs</a>
-          <a class="hamburger-menu-desktop-link" href="../tools/kali-tools.html">Tools</a>
-          <a class="hamburger-menu-desktop-link" href="../resources/downloads.html">Resources</a>
-          <a class="hamburger-menu-desktop-link" href="../support/contact.html">Contact</a>
-        </nav>
-        <div class="avatar-dropdown">
-          <img src="../assets/images/avatar.png" alt="User Avatar">
-          <div class="dropdown-content">
-            <a href="../account/profile.html">Profile</a>
-            <a href="../account/settings.html">Settings</a>
-            <a href="../account/logout.html">Logout</a>
-            <button onclick="toggleDarkMode()">🌓 Theme</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="content">
-    <header>
-      <h1>Support InfoSecKe – Make a Donation</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about/mission.html">About</a></li>
-          <li><a href="../support/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section>
-      <p>Support our grassroots cybersecurity initiative by making a donation. Every contribution helps us offer free training, tools, labs, and cybersecurity awareness to communities across Kenya and Africa.</p>
-
-      <h2>💳 Donation Options</h2>
-      <ul>
-        <li>🎯 <strong>MPESA PayBill:</strong> 123456 – Account: InfoSecKe</li>
-        <li>🌍 <strong>PayPal:</strong> <a href="https://paypal.me/infosecke" target="_blank">paypal.me/infosecke</a></li>
-        <li>🏦 <strong>Bank Transfer:</strong> Cooperative Bank – Acc No: 1234567890 – InfoSecKe Initiative</li>
-      </ul>
-
-      <h2>🎁 Why Donate?</h2>
-      <ul>
-        <li>Enable free access to security labs and career training.</li>
-        <li>Empower underrepresented students and beginners in Africa.</li>
-        <li>Support ethical hacking campaigns, mentorship, and job boards.</li>
-        <li>Fund infrastructure like hosting, domains, and open source tools.</li>
-      </ul>
-
-      <h2>🙏 Community Shout-outs</h2>
-      <p>We acknowledge all our supporters on our <a href="../community/acknowledgments.html">Acknowledgments</a> page (unless you choose to stay anonymous).</p>
-
-      <h2>📬 Need Help?</h2>
-      <p>If you have a custom donation idea or want to sponsor a specific project, reach out through our <a href="../support/contact.html">contact form</a>.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-columns">
-        <div class="footer-column">
-          <h4>Community</h4>
-          <ul>
-            <li><a href="../community/community.html">Overview</a></li>
-            <li><a href="../community/events.html">Events</a></li>
-            <li><a href="../community/jobs.html">Jobs</a></li>
-            <li><a href="../community/newsletter.html">Newsletter</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Learn</h4>
-          <ul>
-            <li><a href="../learn/basics.html">Basics</a></li>
-            <li><a href="../learn/web-security.html">Web Security</a></li>
-            <li><a href="../learn/malware.html">Malware</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Labs & Tools</h4>
-          <ul>
-            <li><a href="../training/labs.html">Labs</a></li>
-            <li><a href="../tools/top10.html">Top Tools</a></li>
-            <li><a href="../tools/scripts.html">Scripts</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="../support/contact.html">Contact</a></li>
-            <li><a href="../support/donate.html">Donate</a></li>
-            <li><a href="../support/report.html">Report Bug</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
