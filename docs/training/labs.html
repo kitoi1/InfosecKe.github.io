@@ -3,99 +3,425 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hands-on Labs – InfoSecKe</title>
+  <title>Interactive Cyber Labs – InfoSecKe</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script defer src="../assets/js/main.js"></script>
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <h2>Training</h2>
+      <div class="sidebar-header">
+        <h2>InfoSecKe</h2>
+        <div class="hacker-tag">#root@infosecke:~</div>
+      </div>
       <ul>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="labs.html" class="active">Labs</a></li>
-        <li><a href="vm-guide.html">VM Guide</a></li>
-        <li><a href="setup-tools.html">Setup Tools</a></li>
-        <li><a href="bug-bounty-path.html">Bug Bounty Path</a></li>
-        <li><a href="practice-platforms.html">Practice Platforms</a></li>
+        <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> Courses</a></li>
+        <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+        <li><a href="labs.html" class="active"><i class="fas fa-flask"></i> Interactive Labs</a></li>
+        <li><a href="vm-guide.html"><i class="fas fa-server"></i> VM Guide</a></li>
+        <li><a href="setup-tools.html"><i class="fas fa-tools"></i> Setup Tools</a></li>
+        <li><a href="bug-bounty-path.html"><i class="fas fa-bug"></i> Bug Bounty Path</a></li>
+        <li><a href="practice-platforms.html"><i class="fas fa-shield-alt"></i> Practice Platforms</a></li>
       </ul>
-      <button id="themeToggle">🌓 Theme</button>
+      <div class="sidebar-footer">
+        <button id="themeToggle"><i class="fas fa-moon"></i> Dark Mode</button>
+        <div class="hacker-terminal">
+          <span class="blinking-cursor">_</span>
+        </div>
+      </div>
     </aside>
 
     <div class="content">
-      <header>
-        <h1>Hands-On Cybersecurity Labs</h1>
+      <header class="hacker-header">
+        <h1><i class="fas fa-terminal"></i> InfoSecKe Cyber Dojo</h1>
         <nav>
           <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about/mission.html">About</a></li>
-            <li><a href="../support/contact.html">Support</a></li>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../about/mission.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="../support/contact.html"><i class="fas fa-life-ring"></i> Support</a></li>
+            <li><a href="../community/forum.html"><i class="fas fa-users"></i> Community</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <section>
-          <p>Labs are the heart of practical cybersecurity learning. At InfoSecKe, we recommend platforms that allow you to simulate attacks, build defenses, and solve real-world challenges. Below is a curated list of the best labs to master hacking, forensics, networking, and more.</p>
-
-          <h2>🧪 Beginner Labs</h2>
-          <div class="lab">
-            <img src="../assets/images/labs/tryhackme.png" alt="TryHackMe Logo">
-            <h3><a href="https://tryhackme.com" target="_blank">TryHackMe</a></h3>
-            <p>A beginner-friendly platform with guided labs, challenges, and free paths like <strong>Pre-Security</strong> and <strong>Complete Beginner</strong>.</p>
-            <a href="https://tryhackme.com/path/outline/complete-beginner" target="_blank">Start the Complete Beginner Path →</a>
+        <section class="intro-section">
+          <div class="hacker-banner">
+            <div class="typewriter">
+              <h2>Welcome to the InfoSecKe Cyber Range</h2>
+            </div>
+            <p>Our labs simulate real-world attack scenarios where you can legally practice offensive and defensive cybersecurity techniques. All labs are designed with education in mind.</p>
+            
+            <div class="difficulty-levels">
+              <div class="difficulty-card">
+                <i class="fas fa-flag"></i>
+                <h3>Beginner</h3>
+                <p>Learn fundamental concepts with guided exercises</p>
+              </div>
+              <div class="difficulty-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Intermediate</h3>
+                <p>Challenge yourself with realistic scenarios</p>
+              </div>
+              <div class="difficulty-card">
+                <i class="fas fa-skull"></i>
+                <h3>Advanced</h3>
+                <p>Test your skills against hardened systems</p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div class="lab">
-            <img src="../assets/images/labs/overthewire.png" alt="OverTheWire Logo">
-            <h3><a href="https://overthewire.org/wargames/" target="_blank">OverTheWire</a></h3>
-            <p>Command-line based challenges like <strong>Bandit</strong> are excellent for sharpening your Linux skills.</p>
-            <a href="https://overthewire.org/wargames/bandit/" target="_blank">Play Bandit →</a>
+        <section class="lab-categories">
+          <h2><i class="fas fa-layer-group"></i> Lab Categories</h2>
+          
+          <div class="category-tabs">
+            <button class="tab-button active" data-tab="web">Web App Security</button>
+            <button class="tab-button" data-tab="network">Network Pentesting</button>
+            <button class="tab-button" data-tab="binary">Binary Exploitation</button>
+            <button class="tab-button" data-tab="cloud">Cloud Security</button>
+            <button class="tab-button" data-tab="forensics">Digital Forensics</button>
           </div>
-
-          <h2>🔍 Intermediate Labs</h2>
-          <div class="lab">
-            <img src="../assets/images/labs/hackthebox.png" alt="Hack The Box Logo">
-            <h3><a href="https://hackthebox.com" target="_blank">Hack The Box</a></h3>
-            <p>Realistic, CTF-style machines from Active Directory to Web Apps. Start with the <strong>Starting Point</strong> series if you're new.</p>
-            <a href="https://app.hackthebox.com/starting-point" target="_blank">Hack HTB Starting Point →</a>
+          
+          <div class="tab-content active" id="web">
+            <h3><i class="fas fa-globe"></i> Web Application Security</h3>
+            <p>Master the OWASP Top 10 vulnerabilities and modern web app defenses.</p>
+            <ul class="lab-list">
+              <li><i class="fas fa-database"></i> SQL Injection (SQLi)</li>
+              <li><i class="fas fa-code"></i> Cross-Site Scripting (XSS)</li>
+              <li><i class="fas fa-unlock-alt"></i> Authentication Bypass</li>
+              <li><i class="fas fa-share-alt"></i> CSRF Attacks</li>
+              <li><i class="fas fa-file-upload"></i> File Upload Vulnerabilities</li>
+            </ul>
           </div>
-
-          <div class="lab">
-            <img src="../assets/images/labs/portswigger.png" alt="PortSwigger Logo">
-            <h3><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Labs</a></h3>
-            <p>Perfect for learning web application vulnerabilities aligned to OWASP Top 10. Over 150+ free hands-on labs!</p>
-            <a href="https://portswigger.net/web-security/all-labs" target="_blank">Explore Web Security Labs →</a>
+          
+          <div class="tab-content" id="network">
+            <h3><i class="fas fa-network-wired"></i> Network Pentesting</h3>
+            <p>Learn network reconnaissance, exploitation, and post-exploitation techniques.</p>
+            <ul class="lab-list">
+              <li><i class="fas fa-search"></i> Network Enumeration</li>
+              <li><i class="fas fa-plug"></i> Service Exploitation</li>
+              <li><i class="fas fa-arrows-alt-h"></i> Pivoting Techniques</li>
+              <li><i class="fas fa-wifi"></i> Wireless Attacks</li>
+              <li><i class="fas fa-user-secret"></i> Man-in-the-Middle (MITM)</li>
+            </ul>
           </div>
+          
+          <!-- Additional tab content sections would go here -->
+        </section>
 
-          <h2>🔥 Advanced Labs</h2>
-          <div class="lab">
-            <img src="../assets/images/labs/offsec.png" alt="Offensive Security Logo">
-            <h3><a href="https://www.offsec.com/labs/" target="_blank">Offensive Security Labs</a></h3>
-            <p>These are part of the OSCP and PEN-200 training courses. Realistic networks, exploit development, and pivoting skills are tested here.</p>
-            <a href="https://www.offsec.com/labs/" target="_blank">Browse OffSec Labs →</a>
+        <section class="featured-labs">
+          <h2><i class="fas fa-star"></i> Featured Labs</h2>
+          
+          <div class="lab-cards">
+            <div class="lab-card">
+              <div class="lab-header">
+                <span class="difficulty beginner">Beginner</span>
+                <h3><i class="fas fa-database"></i> SQL Injection Fundamentals</h3>
+              </div>
+              <p>Learn how to identify and exploit SQL injection vulnerabilities in web applications.</p>
+              <div class="lab-meta">
+                <span><i class="fas fa-clock"></i> 2 hours</span>
+                <span><i class="fas fa-tags"></i> Web, OWASP</span>
+              </div>
+              <div class="lab-actions">
+                <a href="https://tryhackme.com/room/sqlinjection" target="_blank" class="button lab-button"><i class="fas fa-play"></i> Start Lab</a>
+                <a href="#" class="button secondary-button"><i class="fas fa-book"></i> Guide</a>
+              </div>
+            </div>
+            
+            <div class="lab-card">
+              <div class="lab-header">
+                <span class="difficulty intermediate">Intermediate</span>
+                <h3><i class="fas fa-user-secret"></i> Active Directory Exploitation</h3>
+              </div>
+              <p>Practice common AD attack techniques like Kerberoasting, Pass-the-Hash, and Golden Tickets.</p>
+              <div class="lab-meta">
+                <span><i class="fas fa-clock"></i> 4 hours</span>
+                <span><i class="fas fa-tags"></i> Windows, Red Team</span>
+              </div>
+              <div class="lab-actions">
+                <a href="https://tryhackme.com/room/attacktivedirectory" target="_blank" class="button lab-button"><i class="fas fa-play"></i> Start Lab</a>
+                <a href="#" class="button secondary-button"><i class="fas fa-book"></i> Guide</a>
+              </div>
+            </div>
+            
+            <div class="lab-card">
+              <div class="lab-header">
+                <span class="difficulty advanced">Advanced</span>
+                <h3><i class="fas fa-bug"></i> Buffer Overflow Exploitation</h3>
+              </div>
+              <p>Learn stack-based buffer overflows from fuzzing to shellcode execution.</p>
+              <div class="lab-meta">
+                <span><i class="fas fa-clock"></i> 6 hours</span>
+                <span><i class="fas fa-tags"></i> Binary, Exploit Dev</span>
+              </div>
+              <div class="lab-actions">
+                <a href="https://tryhackme.com/room/bufferoverflowprep" target="_blank" class="button lab-button"><i class="fas fa-play"></i> Start Lab</a>
+                <a href="#" class="button secondary-button"><i class="fas fa-book"></i> Guide</a>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <h2>🎥 Video Walkthroughs</h2>
-          <iframe width="100%" height="250" src="https://www.youtube.com/embed/9qzjWm56R2s" title="TryHackMe Beginner Path Walkthrough" frameborder="0" allowfullscreen></iframe>
-          <iframe width="100%" height="250" src="https://www.youtube.com/embed/BmCYOiYjOtQ" title="Top Free Hacking Labs" frameborder="0" allowfullscreen></iframe>
+        <section class="ctf-section">
+          <h2><i class="fas fa-flag"></i> Capture The Flag Challenges</h2>
+          <p>Test your skills with our curated CTF challenges that simulate real-world scenarios:</p>
+          
+          <div class="ctf-levels">
+            <div class="ctf-level">
+              <h3>Jeopardy-Style CTFs</h3>
+              <ul>
+                <li>Web Challenges</li>
+                <li>Crypto Puzzles</li>
+                <li>Steganography</li>
+                <li>Forensics</li>
+                <li>Reverse Engineering</li>
+              </ul>
+            </div>
+            
+            <div class="ctf-level">
+              <h3>Attack-Defense CTFs</h3>
+              <ul>
+                <li>Real-time competition</li>
+                <li>Defend your services</li>
+                <li>Attack opponent systems</li>
+                <li>Flag submission system</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="ctf-timeline">
+            <h3>Upcoming CTF Events</h3>
+            <div class="timeline-item">
+              <div class="timeline-date">July 25, 2025</div>
+              <div class="timeline-content">
+                <h4>Beginner CTF: InfoSecKe Fundamentals</h4>
+                <p>24-hour CTF focused on basic security concepts</p>
+                <a href="#" class="button small-button">Register</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">August 15, 2025</div>
+              <div class="timeline-content">
+                <h4>Advanced CTF: Red vs Blue</h4>
+                <p>Attack/defend competition with professional scoring</p>
+                <a href="#" class="button small-button">Register</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <h2>📌 Bonus Practice Labs</h2>
-          <ul>
-            <li><a href="https://vulnhub.com" target="_blank">VulnHub</a> – Download vulnerable machines</li>
-            <li><a href="https://crackmes.one" target="_blank">Crackmes.one</a> – Reverse engineering and binary cracking challenges</li>
-            <li><a href="https://picoctf.org" target="_blank">picoCTF</a> – Beginner-friendly CTF by Carnegie Mellon</li>
-            <li><a href="https://root-me.org" target="_blank">Root Me</a> – French-based lab with global community</li>
-          </ul>
+        <section class="lab-environment">
+          <h2><i class="fas fa-desktop"></i> Build Your Hacking Lab</h2>
+          <p>Set up your own professional cybersecurity lab environment:</p>
+          
+          <div class="environment-options">
+            <div class="env-option">
+              <h3><i class="fas fa-laptop-code"></i> Local Virtual Lab</h3>
+              <ul>
+                <li>Kali Linux VM</li>
+                <li>Metasploitable targets</li>
+                <li>Windows AD lab</li>
+                <li>Custom vulnerable apps</li>
+              </ul>
+              <a href="vm-guide.html" class="button env-button">Setup Guide</a>
+            </div>
+            
+            <div class="env-option">
+              <h3><i class="fas fa-cloud"></i> Cloud-Based Lab</h3>
+              <ul>
+                <li>AWS/Azure/GCP environments</li>
+                <li>Pre-configured attack ranges</li>
+                <li>Containerized targets</li>
+                <li>Automated deployment</li>
+              </ul>
+              <a href="#" class="button env-button">Cloud Setup</a>
+            </div>
+            
+            <div class="env-option">
+              <h3><i class="fas fa-box-open"></i> Pre-Built Solutions</h3>
+              <ul>
+                <li>DVWA (Damn Vulnerable Web App)</li>
+                <li>OWASP Juice Shop</li>
+                <li>Hack The Box challenges</li>
+                <li>TryHackMe rooms</li>
+              </ul>
+              <a href="#" class="button env-button">Download</a>
+            </div>
+          </div>
+        </section>
 
-          <h2>💬 Tip</h2>
-          <p>Start small. Don't rush. Document your solutions and learn from failures. Use your dashboard to track progress and bookmark your favorite labs.</p>
+        <section class="resources-section">
+          <h2><i class="fas fa-book-open"></i> Learning Resources</h2>
+          
+          <div class="resource-tabs">
+            <button class="res-tab-button active" data-res-tab="cheatsheets">Cheatsheets</button>
+            <button class="res-tab-button" data-res-tab="tools">Tools</button>
+            <button class="res-tab-button" data-res-tab="books">Books</button>
+            <button class="res-tab-button" data-res-tab="communities">Communities</button>
+          </div>
+          
+          <div class="res-tab-content active" id="cheatsheets">
+            <h3>Essential Cheatsheets</h3>
+            <div class="cheatsheet-grid">
+              <a href="https://github.com/swisskyrepo/PayloadsAllTheThings" target="_blank" class="cheatsheet-card">
+                <i class="fas fa-file-code"></i>
+                <h4>PayloadsAllTheThings</h4>
+                <p>Ultimate collection of pentesting payloads</p>
+              </a>
+              <a href="https://gtfobins.github.io/" target="_blank" class="cheatsheet-card">
+                <i class="fas fa-terminal"></i>
+                <h4>GTFOBins</h4>
+                <p>Linux privilege escalation</p>
+              </a>
+              <a href="https://lolbas-project.github.io/" target="_blank" class="cheatsheet-card">
+                <i class="fab fa-windows"></i>
+                <h4>LOLBAS</h4>
+                <p>Windows living-off-the-land</p>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Additional resource tab content would go here -->
+        </section>
+
+        <section class="progress-section">
+          <h2><i class="fas fa-chart-line"></i> Track Your Progress</h2>
+          <p>Monitor your skill development with our progress tracking system:</p>
+          
+          <div class="progress-tracker">
+            <div class="skill-meter">
+              <h3>Web Application Security</h3>
+              <div class="meter">
+                <div class="progress" style="width: 65%"></div>
+                <span>65%</span>
+              </div>
+            </div>
+            
+            <div class="skill-meter">
+              <h3>Network Pentesting</h3>
+              <div class="meter">
+                <div class="progress" style="width: 45%"></div>
+                <span>45%</span>
+              </div>
+            </div>
+            
+            <div class="achievements">
+              <h3>Recent Badges Earned</h3>
+              <div class="badges">
+                <div class="badge">
+                  <i class="fas fa-lock-open"></i>
+                  <span>SQLi Master</span>
+                </div>
+                <div class="badge">
+                  <i class="fas fa-network-wired"></i>
+                  <span>Nmap Ninja</span>
+                </div>
+                <div class="badge">
+                  <i class="fas fa-user-secret"></i>
+                  <span>PrivEsc Pro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="export-options">
+            <button class="export-button"><i class="fas fa-file-pdf"></i> Export to PDF</button>
+            <button class="export-button"><i class="fas fa-file-csv"></i> Export to CSV</button>
+            <button class="export-button"><i class="fas fa-share-alt"></i> Share Profile</button>
+          </div>
+        </section>
+
+        <section class="community-section">
+          <h2><i class="fas fa-users"></i> Join the Community</h2>
+          <p>Connect with other learners, ask questions, and share knowledge:</p>
+          
+          <div class="community-platforms">
+            <a href="#" class="community-card discord">
+              <i class="fab fa-discord"></i>
+              <h3>Discord</h3>
+              <p>Real-time chat with 5,000+ members</p>
+            </a>
+            
+            <a href="#" class="community-card forum">
+              <i class="fas fa-comments"></i>
+              <h3>Forums</h3>
+              <p>Technical discussions and Q&A</p>
+            </a>
+            
+            <a href="#" class="community-card meetup">
+              <i class="fas fa-calendar-alt"></i>
+              <h3>Meetups</h3>
+              <p>Local and virtual events</p>
+            </a>
+          </div>
+          
+          <div class="testimonials">
+            <h3>What Our Members Say</h3>
+            <div class="testimonial">
+              <img src="../assets/images/avatars/user1.jpg" alt="User avatar">
+              <blockquote>
+                "The labs helped me go from zero to landing my first cybersecurity job in 6 months. The realistic scenarios were exactly what interviewers asked about."
+                <cite>- Jane D., Security Analyst</cite>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="newsletter-section">
+          <h2><i class="fas fa-envelope"></i> Stay Updated</h2>
+          <p>Subscribe to get new lab announcements, security tips, and exclusive content:</p>
+          
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="button subscribe-button"><i class="fas fa-paper-plane"></i> Subscribe</button>
+          </form>
+          
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      <footer class="hacker-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>InfoSecKe</h3>
+            <ul>
+              <li><a href="../about/mission.html">Our Mission</a></li>
+              <li><a href="../about/team.html">Team</a></li>
+              <li><a href="../about/partners.html">Partners</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="../blog/index.html">Blog</a></li>
+              <li><a href="../resources/glossary.html">Glossary</a></li>
+              <li><a href="../resources/roadmaps.html">Career Roadmaps</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+              <li><a href="../legal/terms.html">Terms of Service</a></li>
+              <li><a href="../legal/ethics.html">Ethical Guidelines</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 InfoSecKe. All rights reserved. | <i class="fas fa-shield-alt"></i> Stay Secure</p>
+          <div class="hacker-tag"># cat /var/log/auth.log | grep "Accepted"</div>
+        </div>
       </footer>
     </div>
   </div>
