@@ -20,22 +20,46 @@
     .button:hover { background: #0056b3; }
     .newsletter input[type="email"] { padding: 0.5rem; width: 70%; margin-right: 1rem; border-radius: 4px; border: 1px solid #ccc; }
     .newsletter button { padding: 0.5rem 1rem; border: none; background: #28a745; color: #fff; border-radius: 4px; }
+    .avatar-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 2rem;
+}
+.avatar-dropdown img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 1rem;
+  right: 0;
+  z-index: 1;
+}
+.avatar-dropdown:hover .dropdown-content {
+  display: block;
+}
+.dark-mode .dropdown-content {
+  background-color: #2a2a2a;
+  color: white;
+}
   </style>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+  }
+  window.onload = () => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
     }
-    window.onload = () => {
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-      }
-    };
-    window.onscroll = function () {
-      var scrolled = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
-      document.getElementById("progressBar").style.width = scrolled + "%";
-    };
-  </script>
+  };
+</script>
+
 </head>
 <body>
 <div class="progress-bar" id="progressBar"></div>
@@ -46,10 +70,23 @@
     <a class="logo" href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"></a>
     <div class="header-right">
       <input type="text" placeholder="Search..." />
-      <button onclick="toggleDarkMode()">🌙</button>
-      <a class="button" href="/account/profile.html">My Account</a>
+
+      <!-- Avatar Dropdown with Dark Mode inside -->
+      <div class="avatar-dropdown">
+        <img src="/assets/images/avatar.png" alt="User Avatar">
+        <div class="dropdown-content">
+          <a href="/account/profile.html">Profile</a><br>
+          <a href="/account/settings.html">Settings</a><br>
+          <a href="/account/logout.html">Logout</a><br>
+          <hr>
+          <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        </div>
+      </div>
+
+      <!-- Removed outside toggleDarkMode button -->
     </div>
   </div>
+
   <div class="container">
     <nav>
       <a href="/customers">Customers</a>
@@ -62,6 +99,7 @@
     </nav>
   </div>
 </header>
+
 
 <div class="layout">
   <div class="content">
