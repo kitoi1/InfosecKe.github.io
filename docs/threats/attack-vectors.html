@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attack Vectors – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Threats</h2>
+      <ul>
+        <li><a href="threats.html">Overview</a></li>
+        <li><a href="malware-types.html">Malware Types</a></li>
+        <li><a href="attack-vectors.html" class="active">Attack Vectors</a></li>
+        <li><a href="threat-detail.html">Case Studies</a></li>
+        <li><a href="threat-reports.html">Threat Reports</a></li>
+      </ul>
+      <button id="themeToggle">🌓 Theme</button>
+    </aside>
+
+    <div class="content">
+      <header>
+        <h1>Common Attack Vectors</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/mission.html">About</a></li>
+            <li><a href="../support/contact.html">Support</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>An <strong>attack vector</strong> is the method or pathway a hacker uses to access or exploit a system. Understanding these vectors is essential to protect yourself and your organization from cyber threats.</p>
+
+          <h2>🚨 1. Phishing Emails</h2>
+          <p>Attackers send fraudulent emails designed to trick recipients into revealing personal data or clicking malicious links.</p>
+          <img src="../assets/images/threats/phishing-email.png" alt="Phishing Email Example" class="wide" />
+          <p><a href="https://www.phishing.org/what-is-phishing" target="_blank">Read more about phishing →</a></p>
+
+          <h2>💾 2. Infected USB Devices</h2>
+          <p>USB drops rely on human curiosity. When a malicious USB is plugged in, it executes hidden scripts or malware.</p>
+          <img src="../assets/images/threats/usb-baiting.png" alt="USB Attack" class="wide" />
+
+          <h2>🌐 3. Drive-By Downloads</h2>
+          <p>Visiting a compromised or malicious website can lead to automatic downloading of malware without your consent.</p>
+
+          <h2>👨‍💼 4. Insider Threats</h2>
+          <p>Employees or partners with legitimate access misuse their credentials to steal data or sabotage systems.</p>
+          <p><a href="https://www.cisa.gov/topics/insider-threat" target="_blank">CISA on Insider Threats →</a></p>
+
+          <h2>⚙️ 5. Unpatched Vulnerabilities</h2>
+          <p>Attackers often exploit known software vulnerabilities (CVEs) that haven’t been patched in time. This was the method behind the famous <strong>Equifax breach</strong>.</p>
+
+          <h2>🔌 6. Misconfigured Services</h2>
+          <p>Open ports, unsecured APIs, and misconfigured cloud storage (e.g., open S3 buckets) are common entry points.</p>
+
+          <h2>📱 7. Mobile App Exploits</h2>
+          <p>Fake apps or outdated legitimate apps can contain backdoors, spyware, or allow privilege escalation on mobile devices.</p>
+
+          <h2>🎥 Watch: Top 10 Cyber Attack Vectors</h2>
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/jYgSzU6vKnY" title="Cyber Attack Vectors" frameborder="0" allowfullscreen></iframe>
+
+          <h2>🛡️ How to Defend Against These Vectors</h2>
+          <ul>
+            <li>🔐 Enable multi-factor authentication (MFA)</li>
+            <li>📬 Train users to detect phishing and suspicious links</li>
+            <li>🔄 Regularly update and patch all software</li>
+            <li>🛠️ Audit and secure misconfigured services</li>
+            <li>💼 Use least privilege access for employees</li>
+            <li>📊 Conduct regular penetration testing and security assessments</li>
+          </ul>
+
+          <h2>📚 More Resources</h2>
+          <ul>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10 Web Vulnerabilities</a></li>
+            <li><a href="https://attack.mitre.org/techniques/enterprise/" target="_blank">MITRE ATT&CK Techniques</a></li>
+            <li><a href="https://www.sans.org/cyber-security-courses/security-awareness/" target="_blank">SANS Awareness Training</a></li>
+          </ul>
+
+          <p class="cta">
+            <a href="threat-detail.html" class="button">Next: Real Threat Case Studies →</a>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

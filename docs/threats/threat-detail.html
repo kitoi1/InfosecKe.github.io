@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Threat Case Studies – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Threats</h2>
+      <ul>
+        <li><a href="threats.html">Overview</a></li>
+        <li><a href="malware-types.html">Malware Types</a></li>
+        <li><a href="attack-vectors.html">Attack Vectors</a></li>
+        <li><a href="threat-detail.html" class="active">Case Studies</a></li>
+        <li><a href="threat-reports.html">Threat Reports</a></li>
+      </ul>
+      <button id="themeToggle">🌓 Theme</button>
+    </aside>
+
+    <div class="content">
+      <header>
+        <h1>Cybersecurity Case Studies</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/mission.html">About</a></li>
+            <li><a href="../support/contact.html">Support</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>Studying real-world attacks helps cybersecurity professionals understand how threats evolve and what defenses work. Here are some of the most impactful cases from the past decade:</p>
+
+          <h2>☢️ Stuxnet (2010)</h2>
+          <p><strong>Impact:</strong> Targeted Iranian nuclear centrifuges via Siemens SCADA systems. First known cyberweapon with physical destruction.</p>
+          <img src="../assets/images/threats/stuxnet.png" alt="Stuxnet Diagram" class="wide" />
+          <p><a href="https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/" target="_blank">Wired's in-depth Stuxnet story →</a></p>
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/Yp5nsP4Lidw" title="Stuxnet Explained" frameborder="0" allowfullscreen></iframe>
+
+          <h2>🌐 SolarWinds Supply Chain Attack (2020)</h2>
+          <p><strong>Impact:</strong> Compromised updates in SolarWinds Orion platform affected over 18,000 organizations, including U.S. federal agencies.</p>
+          <img src="../assets/images/threats/solarwinds.png" alt="SolarWinds Compromise Flow" class="wide" />
+          <p><a href="https://www.cisa.gov/news-events/news/cisa-updates-guidance-solarwinds-attack" target="_blank">CISA Official SolarWinds Guidance →</a></p>
+
+          <h2>📲 Pegasus Spyware (2016–2021)</h2>
+          <p><strong>Impact:</strong> A mobile spyware from NSO Group that could silently infect iOS/Android phones and extract messages, mic, camera data.</p>
+          <img src="../assets/images/threats/pegasus.png" alt="Pegasus Spyware" class="wide" />
+          <p><a href="https://www.amnesty.org/en/latest/news/2021/07/the-pegasus-project/" target="_blank">Amnesty Pegasus Project →</a></p>
+
+          <h2>💸 WannaCry Ransomware (2017)</h2>
+          <p><strong>Impact:</strong> Encrypted files in 150+ countries. Used leaked NSA exploit "EternalBlue" against unpatched Windows machines.</p>
+          <img src="../assets/images/threats/wannacry.png" alt="WannaCry Ransom Note" class="wide" />
+          <p><a href="https://www.ncsc.gov.uk/news/reckless-campaign-cyber-attacks" target="_blank">UK NCSC Official Summary →</a></p>
+
+          <h2>🔓 Equifax Breach (2017)</h2>
+          <p><strong>Impact:</strong> Personal and financial data of 147 million people leaked. Cause: Unpatched Apache Struts vulnerability (CVE-2017-5638).</p>
+          <img src="../assets/images/threats/equifax.png" alt="Equifax Breach" class="wide" />
+          <p><a href="https://www.ftc.gov/enforcement/cases-proceedings/refunds/equifax-data-breach-settlement" target="_blank">FTC Case Details →</a></p>
+
+          <h2>🕵️‍♂️ Kenya: Huduma Namba & eCitizen Attacks</h2>
+          <p><strong>Impact:</strong> Data privacy concerns and temporary outages affected national platforms. Reinforced the need for robust national cyber defenses.</p>
+          <p><a href="https://www.theelephant.info/news/2021/08/04/kenyas-digital-id-system-and-privacy-risks/" target="_blank">Read: Kenya's Digital ID Concerns</a></p>
+          <p><a href="https://twitter.com/ODPC_KE" target="_blank">Follow: Kenya Office of Data Protection</a></p>
+
+          <h2>📚 What We Learn</h2>
+          <ul>
+            <li>🚨 Even nation-states can fall victim to poor patching & supply chain attacks</li>
+            <li>🧠 Cyberwarfare includes silent, persistent espionage—not just ransomware</li>
+            <li>🔐 Secure coding, segmentation, patching, and threat intel are critical</li>
+          </ul>
+
+          <h2>📖 Want More?</h2>
+          <ul>
+            <li><a href="https://www.verizon.com/business/resources/reports/dbir/" target="_blank">Verizon Data Breach Investigations Report (DBIR)</a></li>
+            <li><a href="https://attack.mitre.org/" target="_blank">MITRE ATT&CK Case Studies</a></li>
+            <li><a href="https://www.mandiant.com/resources" target="_blank">Mandiant Threat Intel Library</a></li>
+          </ul>
+
+          <p class="cta">
+            <a href="threat-reports.html" class="button">Next: Threat Intelligence Reports →</a>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
