@@ -5,9 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cybersecurity Basics – InfoSecKe</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script defer src="../assets/js/main.js"></script>
 </head>
 <body>
+  <header class="page-header" id="top">
+    <div class="container">
+      <a class="logo" href="../index.html"></a>
+      <div class="header-right">
+        <div class="login-buttons">
+          <a class="button-orange-small" href="../auth/login.html">Login</a>
+          <a class="button-orange-small" href="../auth/register.html">Register</a>
+        </div>
+        <input type="checkbox" id="hamburger-mobile" class="hamburger-input-mobile">
+        <input type="radio" id="hamburger-desktop" class="hamburger-input-desktop" name="mega-nav-input">
+        <div class="hamburger-menu-mobile">
+          <label class="hamburger-menu-label header-hidden" for="hamburger-mobile">
+            <span class="hamburger-layers"></span>
+          </label>
+        </div>
+        <div class="mega-nav">
+          <div class="hamburger-menu-desktop">
+            <label class="hamburger-menu-label header-show" for="hamburger-desktop">
+              <span class="hamburger-layers"></span>
+            </label>
+            <div>
+              <a class="hamburger-menu-desktop-link" href="../index.html"><span class="mega-nav-text">Home</span></a>
+              <a class="hamburger-menu-desktop-link" href="../about/mission.html"><span class="mega-nav-text">Mission</span></a>
+              <a class="hamburger-menu-desktop-link" href="../support/contact.html"><span class="mega-nav-text">Contact</span></a>
+              <a class="hamburger-menu-desktop-link" href="../learn/basics.html"><span class="mega-nav-text">Learn</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <div class="layout">
     <aside class="sidebar">
       <h2>Learn</h2>
@@ -22,19 +55,9 @@
     </aside>
 
     <div class="content">
-      <header>
-        <h1>Cybersecurity Basics</h1>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about/mission.html">Mission</a></li>
-            <li><a href="../support/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
       <main>
         <section>
+          <h1>Cybersecurity Basics</h1>
           <p>Cybersecurity is the practice of protecting computer systems, networks, and data from theft, damage, or unauthorized access. Whether you're a beginner or planning a career in ethical hacking, understanding the basics is essential.</p>
 
           <img src="../assets/images/learn/cyber-basics.jpg" alt="Cybersecurity Basics" style="width:100%; margin: 15px 0; border-radius: 6px;" />
@@ -84,8 +107,50 @@
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      <footer class="wrapper">
+        <div class="container">
+          <div>
+            <p>InfoSecKe</p>
+            <a href="../about/mission.html">Our Mission</a>
+            <a href="../about/team.html">Team</a>
+            <a href="../about/partners.html">Partners</a>
+            <a href="../blog/index.html">Blog</a>
+          </div>
+          <div>
+            <p>Learn</p>
+            <a href="../learn/basics.html">Cybersecurity Basics</a>
+            <a href="../learn/terminology.html">Terminology</a>
+            <a href="../learn/web-security.html">Web Security</a>
+            <a href="../learn/protocols.html">Protocols</a>
+          </div>
+          <div>
+            <p>Training</p>
+            <a href="../training/courses.html">Courses</a>
+            <a href="../training/certifications.html">Certifications</a>
+            <a href="../cyber-range/">Cyber Range</a>
+            <a href="../training/bug-bounty-path.html">Bug Bounty</a>
+          </div>
+          <div>
+            <p>Support</p>
+            <a href="../support/faq.html">FAQ</a>
+            <a href="../support/contact.html">Contact</a>
+            <a href="../support/disclosure.html">Disclosure</a>
+            <a href="../legal/privacy.html">Privacy Policy</a>
+          </div>
+          <div>
+            <p>Community</p>
+            <a href="../community/community.html">Community</a>
+            <a href="../community/events.html">Events</a>
+            <a href="../community/mentorship.html">Mentorship</a>
+          </div>
+          <div>
+            <a href="../index.html"><img src="../assets/images/logo.svg" alt="InfoSecKe Logo" class="footer-logo"></a>
+            <a class="button-outline-blue-small" href="https://twitter.com/InfoSecKe" rel="noreferrer">
+              <span class="icon-twitter"></span> Follow us
+            </a>
+            <p class="grey">&copy; 2025 InfoSecKe</p>
+          </div>
+        </div>
       </footer>
     </div>
   </div>

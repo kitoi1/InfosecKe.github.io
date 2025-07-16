@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donation Status & Impact – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="page-header" id="top">
+    <div class="container">
+      <a class="logo" href="/"><img src="../assets/images/logo.png" alt="InfoSecKe Logo" height="40" /></a>
+      <div class="header-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="avatar-dropdown">
+          <img src="../assets/images/avatar.png" alt="User Avatar">
+          <div class="dropdown-content">
+            <a href="../account/profile.html">Profile</a>
+            <a href="../account/settings.html">Settings</a>
+            <a href="../account/logout.html">Logout</a>
+            <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="layout">
+    <div class="content">
+      <header>
+        <h1>Donation Status & Impact Reports</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="report.html">Bug Report</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>We believe in complete transparency. Every quarter, InfoSecKe publishes an impact report outlining how donations were used to promote cybersecurity education and awareness in Kenya and beyond.</p>
+
+          <h2>📊 Q1 2025 – Highlights</h2>
+          <ul>
+            <li>🚀 Reached 2,400+ learners via online and physical workshops</li>
+            <li>🎯 Deployed 3 new Capture The Flag (CTF) environments</li>
+            <li>🎓 Funded 8 student scholarships for full cybersecurity bootcamps</li>
+            <li>📦 Purchased 10 Raspberry Pi kits for rural digital security clubs</li>
+            <li>📰 Released 2 research briefs and 1 newsletter issue</li>
+          </ul>
+
+          <h2>💼 Financial Breakdown</h2>
+          <ul>
+            <li><strong>Education & Training:</strong> 52%</li>
+            <li><strong>Community Outreach & Events:</strong> 27%</li>
+            <li><strong>Infrastructure (cloud, platform tools):</strong> 13%</li>
+            <li><strong>Operations & Admin:</strong> 8%</li>
+          </ul>
+
+          <h2>📥 Download Reports</h2>
+          <ul>
+            <li><a href="../assets/reports/q1-2025.pdf" target="_blank">Q1 2025 Impact Report (PDF)</a></li>
+            <li><a href="../assets/reports/2024-annual.pdf" target="_blank">2024 Annual Summary (PDF)</a></li>
+          </ul>
+
+          <h2>🙌 A Note of Thanks</h2>
+          <p>Thank you to everyone who donated, sponsored, or supported InfoSecKe. Your generosity drives meaningful progress in cyber literacy, especially among underserved groups.</p>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="wrapper">
+        <div class="container">
+          <div>
+            <p>Initiatives</p>
+            <a href="../community/events.html">Cybersecurity Events</a>
+            <a href="../training/ctf.html">CTF Competitions</a>
+            <a href="../training/labs.html">Practice Labs</a>
+          </div>
+          <div>
+            <p>Resources</p>
+            <a href="../resources.html">Guides</a>
+            <a href="../tools.html">Free Tools</a>
+            <a href="../blog.html">Blog</a>
+          </div>
+          <div>
+            <p>Support</p>
+            <a href="donate.html">Donate</a>
+            <a href="status.html">Impact Reports</a>
+            <a href="report.html">Bug Reporting</a>
+          </div>
+          <div>
+            <p>About</p>
+            <a href="../about/mission.html">Our Mission</a>
+            <a href="../about/team.html">Team</a>
+            <a href="../support/contact.html">Contact</a>
+            <a href="../legal/privacy.html">Privacy</a>
+          </div>
+          <div>
+            <a href="/"><img src="../assets/images/logo.png" alt="InfoSecKe Logo" class="footer-logo" /></a>
+            <a class="button-outline-blue-small" href="https://twitter.com/infosec_ke" target="_blank">🐦 Follow us</a>
+            <p class="grey">&copy; 2025 InfoSecKe Initiative</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    window.onload = function () {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

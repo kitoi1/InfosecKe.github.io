@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report Guidelines – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="page-header" id="top">
+    <div class="container">
+      <a class="logo" href="/"><img src="../assets/images/logo.png" alt="InfoSecKe Logo" height="40" /></a>
+      <div class="header-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="avatar-dropdown">
+          <img src="../assets/images/avatar.png" alt="User Avatar">
+          <div class="dropdown-content">
+            <a href="../account/profile.html">Profile</a><br>
+            <a href="../account/settings.html">Settings</a><br>
+            <a href="../account/logout.html">Logout</a><br>
+            <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="layout">
+    <div class="content">
+      <header>
+        <h1>Responsible Disclosure – Report Guidelines</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../support/report.html">Report a Bug</a></li>
+            <li><a href="../about/mission.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section>
+        <p>We value the work of security researchers and ethical hackers. To ensure a safe and productive collaboration, please follow these guidelines when submitting a vulnerability or incident report.</p>
+
+        <h2>✅ Scope</h2>
+        <ul>
+          <li>Public-facing domains and subdomains of InfoSecKe</li>
+          <li>Web applications hosted by InfoSecKe or officially affiliated with us</li>
+          <li>APIs and backend services exposed to the internet</li>
+        </ul>
+
+        <h2>❌ Out of Scope</h2>
+        <ul>
+          <li>Reports involving social engineering or physical access</li>
+          <li>Denial-of-service attacks or brute-force attempts</li>
+          <li>Missing security headers or low-severity misconfigurations without real-world impact</li>
+        </ul>
+
+        <h2>🛠️ Report Format</h2>
+        <p>Include the following in your submission:</p>
+        <ul>
+          <li><strong>Title:</strong> Short and descriptive</li>
+          <li><strong>Description:</strong> What is the issue and where is it located?</li>
+          <li><strong>Steps to Reproduce:</strong> Clear instructions or proof-of-concept</li>
+          <li><strong>Impact:</strong> Explain the potential consequences</li>
+          <li><strong>Screenshots or Logs:</strong> Optional but helpful</li>
+        </ul>
+
+        <h2>📧 Where to Send</h2>
+        <p>Email your report to <a href="mailto:security@infosecke.org">security@infosecke.org</a> or use our <a href="../support/report.html">secure bug report form</a>.</p>
+
+        <h2>🎁 Rewards</h2>
+        <p>We may offer shoutouts, badges, or rewards for high-impact findings. Visit our <a href="../community/testimonials.html">Hall of Fame</a> to see past contributors.</p>
+
+        <h2>📜 Legal Safe Harbor</h2>
+        <p>We commit to not pursuing legal action against those who report in good faith and follow these guidelines.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <p>InfoSec Tools</p>
+        <a href="/tools.html">All Tools</a>
+        <a href="/tools/free-tools.html">Free Resources</a>
+        <a href="/tools/research.html">Open Research</a>
+      </div>
+      <div>
+        <p>Community</p>
+        <a href="/community/community.html">Overview</a>
+        <a href="/community/events.html">Events</a>
+        <a href="/community/sponsors.html">Sponsors</a>
+      </div>
+      <div>
+        <p>Support</p>
+        <a href="/support/contact.html">Contact</a>
+        <a href="/support/donate.html">Donate</a>
+        <a href="/support/status.html">Status</a>
+      </div>
+      <div>
+        <p>Legal</p>
+        <a href="/legal/privacy.html">Privacy</a>
+        <a href="/legal/terms.html">Terms</a>
+        <a href="/report-guidelines.html">Disclosure Policy</a>
+      </div>
+      <div>
+        <img src="../assets/images/logo.png" class="footer-logo" alt="InfoSecKe Logo">
+        <a class="button-outline-blue-small" href="https://twitter.com/InfoSec_Ke" rel="noreferrer" target="_blank">
+          <span class="icon-twitter"></span> Follow us
+        </a>
+        <p class="grey">&copy; 2025 InfoSecKe Foundation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    window.onload = function () {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

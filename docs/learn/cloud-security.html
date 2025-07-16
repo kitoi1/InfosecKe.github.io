@@ -6,9 +6,76 @@
   <title>Cloud Security – InfoSecKe</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <script defer src="../assets/js/main.js"></script>
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    .sidebar {
+      transition: transform 0.3s ease;
+    }
+    .sidebar.collapsed {
+      transform: translateX(-100%);
+    }
+    .toggle-sidebar {
+      display: none;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .toggle-sidebar {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- PortSwigger-style InfoSecKe Header -->
+  <header class="page-header" id="top">
+    <div class="container">
+      <a class="logo" href="../index.html"><img src="../assets/images/logo.svg" alt="InfoSecKe Logo" /></a>
+      <div class="header-right">
+        <div class="login-buttons">
+          <a class="button-orange-small" href="../account/profile.html">My account</a>
+        </div>
+
+        <input type="checkbox" id="hamburger-mobile" class="hamburger-input-mobile">
+        <input type="radio" id="hamburger-desktop" class="hamburger-input-desktop" name="mega-nav-input">
+
+        <div class="hamburger-menu-mobile">
+          <label class="hamburger-menu-label header-hidden" for="hamburger-mobile">
+            <span class="hamburger-layers"></span>
+          </label>
+        </div>
+
+        <div class="mega-nav">
+          <input type="radio" id="mega-nav-close" class="mega-nav-input-close" name="mega-nav-input">
+          <input type="radio" id="mega-nav-label-1" class="mega-nav-input-1" name="mega-nav-input">
+          <div class="hamburger-menu-desktop">
+            <label class="hamburger-menu-label header-show" for="hamburger-desktop">
+              <span class="hamburger-layers"></span>
+            </label>
+            <div>
+              <a class="hamburger-menu-desktop-link" href="../dashboard.html"><span class="mega-nav-text">Dashboard</span></a>
+              <a class="hamburger-menu-desktop-link" href="../about/mission.html"><span class="mega-nav-text">About</span></a>
+              <a class="hamburger-menu-desktop-link" href="../blog/index.html"><span class="mega-nav-text">Blog</span></a>
+              <a class="hamburger-menu-desktop-link" href="../training/courses.html"><span class="mega-nav-text">Training</span></a>
+              <a class="hamburger-menu-desktop-link" href="../legal/privacy.html"><span class="mega-nav-text">Privacy</span></a>
+              <a class="hamburger-menu-desktop-link" href="../support/contact.html"><span class="mega-nav-text">Contact</span></a>
+              <a class="hamburger-menu-desktop-link" href="../partners.html"><span class="mega-nav-text">Partners</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <div class="layout">
+    <button class="toggle-sidebar" onclick="document.querySelector('.sidebar').classList.toggle('collapsed')">☰ Menu</button>
     <aside class="sidebar">
       <h2>Learn</h2>
       <ul>
@@ -23,19 +90,10 @@
     </aside>
 
     <div class="content">
-      <header>
-        <h1>Cloud Security Essentials</h1>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about/team.html">Team</a></li>
-            <li><a href="../support/contact.html">Support</a></li>
-          </ul>
-        </nav>
-      </header>
-
       <main>
         <section>
+          <h1>Cloud Security Essentials</h1>
+
           <p>As businesses migrate to cloud platforms like AWS, Azure, and Google Cloud, securing these environments has become crucial. Cloud security involves strategies and tools to protect data, applications, and infrastructure hosted in the cloud.</p>
 
           <img src="../assets/images/learn/cloud-security-diagram.png" alt="Cloud Security Diagram" style="width:100%; margin:20px 0; border-radius:8px;"/>
@@ -89,10 +147,50 @@
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      <footer class="wrapper">
+        <div class="container">
+          <div>
+            <p>InfoSecKe</p>
+            <a href="../about/mission.html">Our Mission</a>
+            <a href="../about/team.html">Team</a>
+            <a href="../partners.html">Partners</a>
+          </div>
+          <div>
+            <p>Learn</p>
+            <a href="basics.html">Cybersecurity Basics</a>
+            <a href="encryption.html">Encryption</a>
+            <a href="web-security.html">Web Security</a>
+            <a href="cloud-security.html">Cloud Security</a>
+          </div>
+          <div>
+            <p>Training</p>
+            <a href="../training/courses.html">Courses</a>
+            <a href="../training/certifications.html">Certifications</a>
+            <a href="../cyber-range/">Cyber Range</a>
+          </div>
+          <div>
+            <p>Community</p>
+            <a href="../community/community.html">Community</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../support/contact.html">Contact</a>
+          </div>
+          <div>
+            <p>Legal</p>
+            <a href="../legal/privacy.html">Privacy Policy</a>
+            <a href="../legal/terms.html">Terms & Conditions</a>
+          </div>
+          <div>
+            <a href="../index.html"><img src="../assets/images/logo.svg" alt="InfoSecKe Logo" class="footer-logo"/></a>
+            <p class="grey">&copy; 2025 InfoSecKe. Cybersecurity for Kenya’s Digital Future.</p>
+          </div>
+        </div>
       </footer>
     </div>
   </div>
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
