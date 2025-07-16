@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report a Bug – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode input,
+    .dark-mode textarea {
+      background-color: #1e1e1e;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    .report-form {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 700px;
+      margin: 2rem auto;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .dark-mode .report-form {
+      background: #222;
+    }
+
+    .report-form h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .report-form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .report-form input,
+    .report-form textarea,
+    .report-form select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .report-form button {
+      margin-top: 1.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .report-form button:hover {
+      background-color: #0056b3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar-dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 2rem;
+    }
+
+    .avatar-dropdown img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      padding: 1rem;
+      right: 0;
+      z-index: 1;
+    }
+
+    .avatar-dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dark-mode .dropdown-content {
+      background-color: #2a2a2a;
+      color: white;
+    }
+
+    header.page-header {
+      padding: 1rem 0;
+      border-bottom: 1px solid #ccc;
+      background: white;
+    }
+
+    .dark-mode header.page-header {
+      background-color: #1c1c1c;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer.wrapper {
+      margin-top: 4rem;
+      background: #f1f1f1;
+      padding: 2rem 0;
+    }
+
+    .dark-mode footer.wrapper {
+      background-color: #1a1a1a;
+    }
+
+    footer.wrapper .container > div {
+      margin-bottom: 1rem;
+    }
+
+    footer.wrapper .container p,
+    footer.wrapper .container a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dark-mode footer.wrapper p,
+    .dark-mode footer.wrapper a {
+      color: #ccc;
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <a class="logo" href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"></a>
+      <div class="header-right">
+        <input type="text" placeholder="Search..." />
+        <div class="avatar-dropdown">
+          <img src="/assets/images/avatar.png" alt="User Avatar">
+          <div class="dropdown-content">
+            <a href="/account/profile.html">Profile</a><br>
+            <a href="/account/settings.html">Settings</a><br>
+            <a href="/account/logout.html">Logout</a><br>
+            <hr>
+            <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <nav>
+        <a href="/customers">Customers</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/careers">Careers</a>
+        <a href="/legal">Legal</a>
+        <a href="/contact">Contact</a>
+        <a href="/support/reseller-faqs">Resellers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="report-form">
+      <h2>🐞 Report a Bug or Issue</h2>
+      <p>Help us keep InfoSecKe secure and bug-free. Report any vulnerabilities, UI issues, or suspicious behaviors using the form below.</p>
+      <form action="/submit-bug" method="POST">
+        <label for="reporter">Your Name or Handle</label>
+        <input type="text" id="reporter" name="reporter" placeholder="e.g., CyberAgent_47" required>
+
+        <label for="email">Email (optional)</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+
+        <label for="type">Type of Issue</label>
+        <select id="type" name="type" required>
+          <option value="">-- Select Type --</option>
+          <option value="vulnerability">Security Vulnerability</option>
+          <option value="bug">UI Bug</option>
+          <option value="performance">Performance</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="description">Detailed Description</label>
+        <textarea id="description" name="description" rows="6" placeholder="Explain what you found, how to reproduce it, and any links or screenshots." required></textarea>
+
+        <label for="url">Affected Page (URL)</label>
+        <input type="url" id="url" name="url" placeholder="https://infosecke.org/path/to/page">
+
+        <button type="submit"><i class="fas fa-bug"></i> Submit Report</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="wrapper">
+    <div class="container">
+      <div>
+        <p>Bug Bounty</p>
+        <a href="/burp/vulnerability-scanner">Web vulnerability scanner</a>
+        <a href="/burp">Burp Suite Editions</a>
+        <a href="/burp/releases">Release Notes</a>
+      </div>
+      <div>
+        <p>Vulnerabilities</p>
+        <a href="/web-security/cross-site-scripting">Cross-site scripting (XSS)</a>
+        <a href="/web-security/sql-injection">SQL injection</a>
+        <a href="/web-security/csrf">Cross-site request forgery</a>
+        <a href="/web-security/xxe">XML external entity injection</a>
+        <a href="/web-security/file-path-traversal">Directory traversal</a>
+        <a href="/web-security/ssrf">Server-side request forgery</a>
+      </div>
+      <div>
+        <p>Community</p>
+        <a href="/organizations">Organizations</a>
+        <a href="/testers">Testers</a>
+        <a href="/developers">Developers</a>
+      </div>
+      <div>
+        <p>Company</p>
+        <a href="/about">About</a>
+        <a href="/careers">Careers</a>
+        <a href="/legal">Legal</a>
+        <a href="/privacy">Privacy Notice</a>
+      </div>
+      <div>
+        <p>Insights</p>
+        <a href="/web-security">Web Security Academy</a>
+        <a href="/blog">Blog</a>
+        <a href="/research">Research</a>
+      </div>
+      <div>
+        <a href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" class="footer-logo" style="height: 40px;"></a>
+        <a class="button-outline-blue-small camelcase" href="https://twitter.com/InfoSecKe" rel="noreferrer">
+          <span class="icon-twitter"></span> Follow us
+        </a>
+        <p class="grey">&copy; 2025 InfoSecKe Initiative. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

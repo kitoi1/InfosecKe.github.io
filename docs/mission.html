@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Mission – InfoSecKe</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
+  <header class="page-header" id="top">
+    <div class="container">
+      <a class="logo" href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"/></a>
+      <div class="header-right">
+        <div class="login-buttons">
+          <a class="button-orange-small" href="/account/profile.html">My Account</a>
+        </div>
+        <div class="hamburger-menu-desktop">
+          <label class="hamburger-menu-label header-show" for="hamburger-desktop">
+            <span class="hamburger-layers"></span>
+          </label>
+          <div>
+            <a class="hamburger-menu-desktop-link" href="/customers"><span class="mega-nav-text">Customers</span></a>
+            <a class="hamburger-menu-desktop-link" href="/about"><span class="mega-nav-text">About</span></a>
+            <a class="hamburger-menu-desktop-link" href="/blog"><span class="mega-nav-text">Blog</span></a>
+            <a class="hamburger-menu-desktop-link" href="/careers"><span class="mega-nav-text">Careers</span></a>
+            <a class="hamburger-menu-desktop-link" href="/legal"><span class="mega-nav-text">Legal</span></a>
+            <a class="hamburger-menu-desktop-link" href="/contact"><span class="mega-nav-text">Contact</span></a>
+            <a class="hamburger-menu-desktop-link" href="/support/faqs"><span class="mega-nav-text">Support</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout with sidebar and content -->
   <div class="layout">
     <aside class="sidebar">
       <h2>User Menu</h2>
@@ -21,48 +49,95 @@
     </aside>
 
     <div class="content">
-      <header>
-        <h1>Our Mission</h1>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
       <main>
-        <section>
-          <h2>Empowering Cybersecurity in Kenya</h2>
-          <p>InfoSecKe is a grassroots-driven initiative committed to raising cybersecurity awareness, promoting ethical hacking practices, and building cyber resilience within Kenyan communities. Our mission is to empower students, professionals, businesses, and organizations to understand and protect themselves from digital threats.</p>
+        <section class="page-section">
+          <h1>Our Mission</h1>
 
-          <h3>What We Stand For</h3>
+          <h2>Empowering Cybersecurity in Kenya and Beyond</h2>
+          <p>InfoSecKe is a grassroots cybersecurity movement dedicated to fortifying Kenya’s digital landscape. Our initiative emerged from the growing demand for accessible, practical, and locally relevant cybersecurity education. We operate as a community-driven ecosystem focused on developing homegrown talent, promoting ethical hacking, and fostering innovation in information security practices.</p>
+
+          <p>As cyber threats evolve globally, Africa faces a unique set of challenges—from lack of awareness to limited access to tools and training. InfoSecKe aims to bridge this gap by equipping individuals and organizations with the knowledge, skills, and mindset to identify, prevent, and respond to cyber incidents.</p>
+
+          <h3>What We Believe</h3>
           <ul>
-            <li><strong>Education First:</strong> We believe knowledge is the first line of defense. Through free resources, training, and workshops, we aim to spread critical cyber literacy.</li>
-            <li><strong>Accessibility:</strong> We are dedicated to creating open access to security tools and platforms for all, especially underserved regions in Kenya and Africa.</li>
-            <li><strong>Community Engagement:</strong> We foster collaboration between hackers, defenders, researchers, and policymakers to build a unified cyber defense front.</li>
+            <li><strong>Cyber Literacy for All:</strong> Every Kenyan deserves the knowledge to stay safe online. We make this possible through interactive learning resources, hands-on labs, and awareness campaigns.</li>
+            <li><strong>Community-Led Security:</strong> Our strength lies in our people. We champion the collaboration of ethical hackers, security analysts, researchers, students, and tech enthusiasts to create a united defense against cybercrime.</li>
+            <li><strong>Inclusivity and Opportunity:</strong> We actively support diversity in cybersecurity and offer mentorship, scholarships, and free tools to underrepresented groups, including women, youth, and rural learners.</li>
+            <li><strong>Open-Source First:</strong> We believe in transparency and innovation. Most of our projects are open source, allowing others to contribute, learn, and improve upon them.</li>
           </ul>
 
-          <h3>Our Objectives</h3>
+          <h3>Our Core Objectives</h3>
           <ol>
-            <li>Develop practical cybersecurity skills among Kenyan youth and professionals.</li>
-            <li>Facilitate secure digital transformations for small businesses and startups.</li>
-            <li>Create public awareness around common cyber threats and social engineering tactics.</li>
-            <li>Encourage participation in bug bounty programs and Capture The Flag (CTF) events.</li>
-            <li>Support open-source security innovation in Kenya and East Africa.</li>
+            <li>Deliver affordable and high-impact cybersecurity education via virtual labs, CTFs, and micro-certifications.</li>
+            <li>Increase the number of skilled ethical hackers and security engineers across Kenya and East Africa.</li>
+            <li>Promote responsible disclosure and ethical vulnerability reporting among local bug bounty hunters.</li>
+            <li>Partner with schools, universities, and local businesses to integrate cybersecurity into everyday operations.</li>
+            <li>Establish Kenya as a hub for ethical hacking talent and open-source cyber tools development.</li>
           </ol>
 
-          <h3>Join the Movement</h3>
-          <p>We are always seeking contributors, mentors, and partners to expand our reach and impact. Whether you're a beginner, expert, or enthusiast—there's a place for you in InfoSecKe.</p>
-          <p><a href="contact.html" class="button">Get Involved →</a></p>
+          <h3>Our Strategic Initiatives</h3>
+          <ul>
+            <li><strong>Cyber Labs & Range:</strong> An interactive cyber range that simulates real-world attacks to prepare learners for red team/blue team roles.</li>
+            <li><strong>Mentorship & Career Pathways:</strong> Guided tracks for penetration testers, SOC analysts, DevSecOps engineers, and more.</li>
+            <li><strong>Cyber Threat Reports:</strong> Monthly analysis of emerging threats, CVEs, and localized security incidents.</li>
+            <li><strong>Research & Development:</strong> Supporting homegrown tools like VulnHunter, KasauXSS, and our Auto-Lab Generator for ethical hacking practice.</li>
+            <li><strong>National Awareness Campaigns:</strong> Offline and online outreach programs targeting digital safety for students, families, and SMEs.</li>
+          </ul>
+
+          <h3>Our Vision</h3>
+          <p>We envision a digitally sovereign Kenya where cybersecurity is not a privilege but a basic right—where every citizen, institution, and enterprise has access to the tools and training necessary to thrive in a connected world.</p>
+
+          <h3>Join the InfoSecKe Movement</h3>
+          <p>Whether you're a beginner eager to learn, a seasoned hacker ready to mentor, a company wanting to give back, or a researcher seeking collaboration—InfoSecKe is your home. Together, we can build a safer, smarter cyber future for all.</p>
+
+          <p><a href="contact.html" class="button">Become a Contributor →</a></p>
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      <!-- Enhanced Footer -->
+      <footer class="wrapper">
+        <div class="container">
+          <div>
+            <p>InfoSecKe Tools</p>
+            <a href="/tools/kali-tools.html">Kali Tools</a>
+            <a href="/tools/payloads.html">Payloads</a>
+            <a href="/tools/scripts.html">Scripts</a>
+            <a href="/tools/">All Tools</a>
+          </div>
+          <div>
+            <p>Vulnerabilities</p>
+            <a href="/web-security/xss.html">XSS</a>
+            <a href="/web-security/sql-injection.html">SQL Injection</a>
+            <a href="/web-security/csrf.html">CSRF</a>
+            <a href="/web-security/ssrf.html">SSRF</a>
+          </div>
+          <div>
+            <p>Community</p>
+            <a href="/community/testimonials.html">Testimonials</a>
+            <a href="/community/events.html">Events</a>
+            <a href="/community/jobs.html">Jobs</a>
+          </div>
+          <div>
+            <p>Company</p>
+            <a href="/about/team.html">Our Team</a>
+            <a href="/careers.html">Careers</a>
+            <a href="/legal/ethics.html">Ethical Guidelines</a>
+            <a href="/legal/privacy.html">Privacy Policy</a>
+          </div>
+          <div>
+            <p>Insights</p>
+            <a href="/research/cyberlaws.html">Cyber Laws</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/resources/videos.html">Video Tutorials</a>
+          </div>
+          <div>
+            <a href="/"><img src="/assets/images/logo-dark.png" alt="InfoSecKe Logo" class="footer-logo"/></a>
+            <a class="button-outline-blue-small camelcase" href="https://twitter.com/InfoSecKe" rel="noreferrer">
+              <i class="fab fa-twitter"></i> Follow us
+            </a>
+            <p class="grey">&copy; 2025 InfoSecKe. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   </div>

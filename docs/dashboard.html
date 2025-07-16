@@ -1,120 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>User Dashboard – InfoSecKe</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/main.js"></script>
-=======
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard – InfoSecKe</title>
-  <link rel="stylesheet" href="assets/css/style.css">
->>>>>>> 32dbcdd9d40723d29e05d7b01f99c3673daf99bb
+  <title>Cyber Command Center | InfoSecKe</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/dashboard.js"></script>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <h2>User Menu</h2>
-      <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="account/profile.html">Profile</a></li>
-        <li><a href="account/settings.html">Settings</a></li>
-        <li><a href="account/logout.html">Logout</a></li>
-      </ul>
-<<<<<<< HEAD
-      <button id="themeToggle">🌓 Toggle Theme</button>
-=======
->>>>>>> 32dbcdd9d40723d29e05d7b01f99c3673daf99bb
-    </aside>
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="/"><img src="/assets/images/logo-dark.png" alt="InfoSecKe Logo" width="180"></a>
+      </div>
+      
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/cyber-range/"><i class="fas fa-flask"></i> Cyber Range</a></li>
+          <li><a href="/training/"><i class="fas fa-graduation-cap"></i> Training</a></li>
+          <li><a href="/community/"><i class="fas fa-users"></i> Community</a></li>
+          <li><a href="/resources/"><i class="fas fa-book-open"></i> Resources</a></li>
+          <li><a href="/news/"><i class="fas fa-newspaper"></i> News</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search labs, tools...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <a href="/account/profile.php" class="user-profile">
+          <img src="/assets/images/avatars/user.jpg" alt="User Avatar">
+          <span>CyberAgent</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <div class="content">
-      <header>
-        <h1>Welcome to Your Dashboard</h1>
-        <nav>
+  <!-- Main Content -->
+  <main class="dashboard-container">
+    <aside class="dashboard-sidebar">
+      <div class="user-card">
+        <div class="user-info">
+          <img src="/assets/images/avatars/user.jpg" alt="User Avatar" class="user-avatar">
+          <h3>CyberAgent_47</h3>
+          <p class="user-title">Security Researcher</p>
+          <div class="user-level">
+            <div class="level-progress" style="width: 65%"></div>
+            <span>Level 3 - 65%</span>
+          </div>
+        </div>
+        
+        <nav class="user-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about/mission.html">About</a></li>
-            <li><a href="support/contact.html">Support</a></li>
+            <li class="active"><a href="/dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="/account/profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+            <li><a href="/training/pathways/"><i class="fas fa-map"></i> Learning Paths</a></li>
+            <li><a href="/account/achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="/account/settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="/account/logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
           </ul>
         </nav>
-      </header>
-
-      <main>
-        <section>
-<<<<<<< HEAD
-          <h2>Hello, <span id="user-name">[Username]</span> 👋</h2>
-          <p>Welcome back! Here’s your control panel to manage your learning, tools, and cybersecurity journey.</p>
-=======
-          <h2>Hello, [Username] 👋</h2>
-          <p>This is your personalized dashboard. Here, you can quickly navigate to your courses, track progress, manage tools, and update your settings.</p>
->>>>>>> 32dbcdd9d40723d29e05d7b01f99c3673daf99bb
-
-          <div class="dashboard-widgets">
-            <div class="widget">
-              <h3>My Courses</h3>
-<<<<<<< HEAD
-              <img src="assets/images/courses.png" alt="Courses" width="100%" />
-              <p><a href="training/courses.html">View Internal Courses →</a></p>
-              <p><a href="https://tryhackme.com" target="_blank">TryHackMe Labs →</a></p>
-              <p><a href="https://www.cybrary.it" target="_blank">Cybrary Courses →</a></p>
-            </div>
-
-            <div class="widget">
-              <h3>Lab Progress</h3>
-              <img src="assets/images/labs.png" alt="Labs" width="100%" />
-              <p><a href="training/labs.html">Your Labs →</a></p>
-              <p><a href="https://portswigger.net/web-security" target="_blank">Burp Web Labs →</a></p>
-              <p><a href="https://pentesterlab.com" target="_blank">PentesterLab →</a></p>
-=======
-              <p><a href="training/courses.html">Continue Learning →</a></p>
-            </div>
-
-            <div class="widget">
-              <h3>My Lab Progress</h3>
-              <p><a href="training/labs.html">View Labs →</a></p>
->>>>>>> 32dbcdd9d40723d29e05d7b01f99c3673daf99bb
-            </div>
-
-            <div class="widget">
-              <h3>Saved Tools</h3>
-<<<<<<< HEAD
-              <img src="assets/images/tools.png" alt="Tools" width="100%" />
-              <p><a href="tools/free-tools.html">Free Tools →</a></p>
-              <p><a href="https://github.com/1ndianl33t/Gf-Patterns" target="_blank">GF Patterns →</a></p>
-              <p><a href="https://github.com/projectdiscovery" target="_blank">ProjectDiscovery Tools →</a></p>
-            </div>
-
-            <div class="widget">
-              <h3>Cybersecurity News</h3>
-              <iframe width="100%" height="200" src="https://www.youtube.com/embed/FDKklv4zHh0" title="Cybersecurity News" frameborder="0" allowfullscreen></iframe>
-              <p><a href="https://thehackernews.com" target="_blank">Visit The Hacker News →</a></p>
-              <p><a href="https://www.bleepingcomputer.com" target="_blank">Visit Bleeping Computer →</a></p>
-=======
-              <p><a href="tools/free-tools.html">Access Tools →</a></p>
->>>>>>> 32dbcdd9d40723d29e05d7b01f99c3673daf99bb
-            </div>
-
-            <div class="widget">
-              <h3>Account Settings</h3>
-<<<<<<< HEAD
-              <img src="assets/images/settings.png" alt="Settings" width="100%" />
-              <p><a href="account/settings.html">Update Your Info →</a></p>
-              <p><a href="account/profile.html">View Profile →</a></p>
-=======
-              <p><a href="account/settings.html">Update Settings →</a></p>
->>>>>>> 32dbcdd9d40723d29e05d7b01f99c3673daf99bb
+        
+        <div class="quick-links">
+          <h4><i class="fas fa-external-link-alt"></i> Quick Links</h4>
+          <ul>
+            <li><a href="/cyber-range/ctf/"><i class="fas fa-flag"></i> CTF Events</a></li>
+            <li><a href="/tools/"><i class="fas fa-tools"></i> Security Tools</a></li>
+            <li><a href="/community/forums/"><i class="fas fa-comments"></i> Forums</a></li>
+            <li><a href="/support/"><i class="fas fa-question-circle"></i> Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    
+    <div class="dashboard-content">
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <div class="welcome-message">
+          <h1><i class="fas fa-terminal"></i> Cyber Command Center</h1>
+          <p>Welcome back to your personalized security training hub. You have <strong>3 active labs</strong> and <strong>2 new community notifications</strong>.</p>
+        </div>
+        
+        <div class="alert-banner">
+          <i class="fas fa-shield-alt"></i>
+          <div>
+            <strong>Security Alert:</strong> New critical vulnerability detected in Apache Log4j (CVE-2025-12345). 
+            <a href="/threats/threat-detail.html">Review mitigation strategies →</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Stats Overview -->
+      <section class="stats-section">
+        <h2><i class="fas fa-chart-line"></i> Your Security Training Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-flask"></i></div>
+            <div class="stat-info">
+              <h3>Labs Completed</h3>
+              <p class="stat-number">27</p>
+              <p class="stat-change">+3 this week</p>
             </div>
           </div>
-        </section>
-      </main>
-
-      <footer>
-        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="legal/privacy.html">Privacy</a> | <a href="legal/terms.html">Terms</a></p>
-      </footer>
+          
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-flag"></i></div>
+            <div class="stat-info">
+              <h3>CTF Challenges</h3>
+              <p class="stat-number">15</p>
+              <p class="stat-change">Top 20% ranking</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-clock"></i></div>
+            <div class="stat-info">
+              <h3>Training Hours</h3>
+              <p class="stat-number">84</p>
+              <p class="stat-change">12h this week</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+            <div class="stat-info">
+              <h3>Badges Earned</h3>
+              <p class="stat-number">9</p>
+              <p class="stat-change">2 new this month</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Active Labs -->
+      <section class="labs-section">
+        <div class="section-header">
+          <h2><i class="fas fa-flask"></i> Your Active Labs</h2>
+          <a href="/cyber-range/" class="view-all">View All Labs →</a>
+        </div>
+        
+        <div class="labs-grid">
+          <div class="lab-card">
+            <div class="lab-header">
+              <span class="lab-category web">Web Security</span>
+              <span class="lab-difficulty intermediate">Intermediate</span>
+            </div>
+            <h3>Advanced SQL Injection Techniques</h3>
+            <p class="lab-description">Learn time-based blind SQLi, out-of-band exploitation, and advanced bypass techniques.</p>
+            <div class="lab-progress">
+              <div class="progress-bar">
+                <div class="progress" style="width: 65%"></div>
+              </div>
+              <span>65% Complete</span>
+            </div>
+            <div class="lab-actions">
+              <a href="/cyber-range/web-apps/sqli/advanced/" class="button">Continue Lab</a>
+              <a href="#" class="button-outline">View Guide</a>
+            </div>
+          </div>
+          
+          <div class="lab-card">
+            <div class="lab-header">
+              <span class="lab-category binary">Binary Exploitation</span>
+              <span class="lab-difficulty advanced">Advanced</span>
+            </div>
+            <h3>Return-Oriented Programming (ROP)</h3>
+            <p class="lab-description">Master ROP chains to bypass DEP protection on modern systems.</p>
+            <div class="lab-progress">
+              <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+              </div>
+              <span>30% Complete</span>
+            </div>
+            <div class="lab-actions">
+              <a href="/cyber-range/binary/rop/" class="button">Continue Lab</a>
+              <a href="#" class="button-outline">View Guide</a>
+            </div>
+          </div>
+          
+          <div class="lab-card">
+            <div class="lab-header">
+              <span class="lab-category network">Network Pentesting</span>
+              <span class="lab-difficulty intermediate">Intermediate</span>
+            </div>
+            <h3>Active Directory Exploitation</h3>
+            <p class="lab-description">Practice Kerberoasting, Golden Ticket attacks, and lateral movement.</p>
+            <div class="lab-progress">
+              <div class="progress-bar">
+                <div class="progress" style="width: 45%"></div>
+              </div>
+              <span>45% Complete</span>
+            </div>
+            <div class="lab-actions">
+              <a href="/cyber-range/network/ad-exploitation/" class="button">Continue Lab</a>
+              <a href="#" class="button-outline">View Guide</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Learning Paths -->
+      <section class="paths-section">
+        <div class="section-header">
+          <h2><i class="fas fa-map-signs"></i> Recommended Learning Paths</h2>
+          <a href="/training/pathways/" class="view-all">Browse All Paths →</a>
+        </div>
+        
+        <div class="paths-grid">
+          <div class="path-card">
+            <div class="path-icon"><i class="fas fa-user-secret"></i></div>
+            <div class="path-content">
+              <h3>Red Team Operations</h3>
+              <p class="path-description">Master offensive security techniques from reconnaissance to post-exploitation.</p>
+              <div class="path-stats">
+                <span>12 Labs</span>
+                <span>•</span>
+                <span>25 Hours</span>
+              </div>
+              <div class="path-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 40%"></div>
+                </div>
+                <span>40% Complete</span>
+              </div>
+              <a href="/training/pathways/red-team/" class="button">Continue Path</a>
+            </div>
+          </div>
+          
+          <div class="path-card">
+            <div class="path-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="path-content">
+              <h3>Blue Team Fundamentals</h3>
+              <p class="path-description">Learn defensive security, SIEM, threat hunting, and incident response.</p>
+              <div class="path-stats">
+                <span>8 Labs</span>
+                <span>•</span>
+                <span>18 Hours</span>
+              </div>
+              <div class="path-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 15%"></div>
+                </div>
+                <span>15% Complete</span>
+              </div>
+              <a href="/training/pathways/blue-team/" class="button">Start Path</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTF Section -->
+      <section class="ctf-section">
+        <div class="section-header">
+          <h2><i class="fas fa-flag"></i> Capture The Flag Events</h2>
+          <a href="/cyber-range/ctf/" class="view-all">View All CTFs →</a>
+        </div>
+        
+        <div class="ctf-grid">
+          <div class="ctf-card featured">
+            <div class="ctf-header">
+              <span class="ctf-status ongoing">Ongoing</span>
+              <span class="ctf-duration">48h remaining</span>
+            </div>
+            <h3>July 2025 Monthly CTF</h3>
+            <p class="ctf-description">Web exploitation, crypto challenges, and forensics puzzles. Compete against 500+ participants.</p>
+            <div class="ctf-stats">
+              <div class="ctf-stat">
+                <i class="fas fa-users"></i>
+                <span>527 Participants</span>
+              </div>
+              <div class="ctf-stat">
+                <i class="fas fa-trophy"></i>
+                <span>Top 15%</span>
+              </div>
+            </div>
+            <a href="/cyber-range/ctf/july-2025/" class="button">Continue CTF</a>
+          </div>
+          
+          <div class="ctf-card">
+            <div class="ctf-header">
+              <span class="ctf-status upcoming">Upcoming</span>
+              <span class="ctf-duration">Starts Aug 5</span>
+            </div>
+            <h3>Advanced Binary Exploitation CTF</h3>
+            <p class="ctf-description">Focus on ROP, heap exploitation, and advanced reverse engineering challenges.</p>
+            <a href="/cyber-range/ctf/binary-aug-2025/" class="button-outline">Register Now</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Community Activity -->
+      <section class="community-section">
+        <div class="section-header">
+          <h2><i class="fas fa-users"></i> Community Activity</h2>
+          <a href="/community/forums/" class="view-all">View All Activity →</a>
+        </div>
+        
+        <div class="activity-feed">
+          <div class="activity-item">
+            <img src="/assets/images/avatars/user1.jpg" alt="User" class="activity-avatar">
+            <div class="activity-content">
+              <p><strong>@SecuritySam</strong> solved <a href="/cyber-range/web-apps/jwt/">JWT Authentication Bypass</a> lab</p>
+              <p class="activity-meta">Web Security • 2 hours ago</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <img src="/assets/images/avatars/user2.jpg" alt="User" class="activity-avatar">
+            <div class="activity-content">
+              <p><strong>@CryptoQueen</strong> posted in <a href="/community/forums/cryptography/">Cryptography Forum</a>: "Help with AES-CBC bit flipping attack"</p>
+              <p class="activity-meta">Forum Post • 5 hours ago • 3 replies</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <img src="/assets/images/avatars/user3.jpg" alt="User" class="activity-avatar">
+            <div class="activity-content">
+              <p><strong>@NetNinja</strong> earned the <a href="/account/achievements/">Privilege Escalation Expert</a> badge</p>
+              <p class="activity-meta">Achievement • Yesterday</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Resources Section -->
+      <section class="resources-section">
+        <h2><i class="fas fa-book-open"></i> Recommended Resources</h2>
+        <div class="resources-grid">
+          <a href="/resources/cheat-sheets.html" class="resource-card">
+            <i class="fas fa-file-code"></i>
+            <h3>Pentesting Cheat Sheets</h3>
+            <p>Quick references for common commands and payloads</p>
+          </a>
+          
+          <a href="/tools/kali-tools.html" class="resource-card">
+            <i class="fas fa-tools"></i>
+            <h3>Kali Tools Guide</h3>
+            <p>Master the Kali Linux toolkit</p>
+          </a>
+          
+          <a href="/news/blog.html" class="resource-card">
+            <i class="fas fa-newspaper"></i>
+            <h3>Security Blog</h3>
+            <p>Latest articles and tutorials</p>
+          </a>
+          
+          <a href="/resources/videos.html" class="resource-card">
+            <i class="fas fa-video"></i>
+            <h3>Video Tutorials</h3>
+            <p>Step-by-step walkthroughs</p>
+          </a>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Cyber Range</h4>
+          <ul>
+            <li><a href="/cyber-range/web-apps/">Web Security</a></li>
+            <li><a href="/cyber-range/network/">Network Pentesting</a></li>
+            <li><a href="/cyber-range/binary/">Binary Exploitation</a></li>
+            <li><a href="/cyber-range/ctf/">CTF Challenges</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Training</h4>
+          <ul>
+            <li><a href="/training/pathways/">Learning Paths</a></li>
+            <li><a href="/training/courses.html">Courses</a></li>
+            <li><a href="/training/certifications.html">Certifications</a></li>
+            <li><a href="/training/labs.html">Interactive Labs</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/resources/cheat-sheets.html">Cheat Sheets</a></li>
+            <li><a href="/tools/">Security Tools</a></li>
+            <li><a href="/research/">Research Papers</a></li>
+            <li><a href="/resources/videos.html">Video Library</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/mission.html">About Us</a></li>
+            <li><a href="/about/team.html">Our Team</a></li>
+            <li><a href="/support/careers.html">Careers</a></li>
+            <li><a href="/support/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/legal/terms.html">Terms of Service</a></li>
+            <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="/legal/ethics.html">Ethical Guidelines</a></li>
+            <li><a href="/legal/disclosure.html">Disclosure Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="/assets/images/logo-light.png" alt="InfoSecKe Logo" width="150">
+        </div>
+        
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; 2025 InfoSecKe. All rights reserved.</p>
+          <p>Educating the next generation of cybersecurity professionals.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body.dark-mode { background: #121212; color: #f0f0f0; }
+    .dark-mode .sidebar, .dark-mode .content, .dark-mode footer { background-color: #1a1a1a; color: #f0f0f0; }
+    .progress-bar { height: 4px; background: #00bfff; position: fixed; top: 0; left: 0; z-index: 1000; width: 0%; transition: width 0.2s; }
+    .page-header, .wrapper { padding: 1rem 2rem; }
+    .container { display: flex; flex-wrap: wrap; justify-content: space-between; }
+    .feature-box, .testimonial, .event, .tool-card, .contributor, .newsletter { margin: 2rem 0; border: 1px solid #ccc; padding: 1rem; border-radius: 8px; background: #fff; }
+    .dark-mode .feature-box, .dark-mode .testimonial, .dark-mode .event, .dark-mode .tool-card, .dark-mode .contributor, .dark-mode .newsletter {
+      background-color: #2a2a2a; border-color: #444;
+    }
+    .button { padding: 0.5rem 1rem; background: #007bff; color: #fff; border-radius: 4px; text-decoration: none; }
+    .button:hover { background: #0056b3; }
+    .newsletter input[type="email"] { padding: 0.5rem; width: 70%; margin-right: 1rem; border-radius: 4px; border: 1px solid #ccc; }
+    .newsletter button { padding: 0.5rem 1rem; border: none; background: #28a745; color: #fff; border-radius: 4px; }
+    .avatar-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 2rem;
+}
+.avatar-dropdown img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 1rem;
+  right: 0;
+  z-index: 1;
+}
+.avatar-dropdown:hover .dropdown-content {
+  display: block;
+}
+.dark-mode .dropdown-content {
+  background-color: #2a2a2a;
+  color: white;
+}
+  </style>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+  }
+  window.onload = () => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  };
+</script>
 
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Header -->
+<header class="page-header">
+  <div class="container">
+    <a class="logo" href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"></a>
+    <div class="header-right">
+      <input type="text" placeholder="Search..." />
+
+      <!-- Avatar Dropdown with Dark Mode inside -->
+      <div class="avatar-dropdown">
+        <img src="/assets/images/avatar.png" alt="User Avatar">
+        <div class="dropdown-content">
+          <a href="/account/profile.html">Profile</a><br>
+          <a href="/account/settings.html">Settings</a><br>
+          <a href="/account/logout.html">Logout</a><br>
+          <hr>
+          <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        </div>
+      </div>
+
+      <!-- Removed outside toggleDarkMode button -->
+    </div>
+  </div>
+
+  <div class="container">
+    <nav>
+      <a href="/customers">Customers</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/careers">Careers</a>
+      <a href="/legal">Legal</a>
+      <a href="/contact">Contact</a>
+      <a href="/support/reseller-faqs">Resellers</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="layout">
+  <div class="content">
+    <main>
+      <h1>Welcome to the InfoSecKe Community</h1>
+      <p>The InfoSecKe community is your gateway to Kenya’s fastest-growing cybersecurity network. Learn, connect, share, and level up your skills with passionate individuals from all walks of life.</p>
+
+      <!-- Testimonials -->
+      <section class="feature-box">
+        <h2>📣 Testimonials</h2>
+        <div class="testimonial">
+          <p>“Joining InfoSecKe completely changed my career. The community helped me land my first bug bounty!” — <strong>@CodeHacker</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>“The mentorship program and CTFs taught me more in 2 months than a full year of training.” — <strong>@NairobiNinja</strong></p>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section class="feature-box">
+        <h2>📅 Upcoming Events</h2>
+        <div class="event">
+          <h4>Cyber Saturday Meetup – Nairobi</h4>
+          <p>📍 Nairobi Garage | 🕒 August 3, 2025</p>
+          <p>Meet fellow hackers, listen to speakers, and solve live web labs!</p>
+        </div>
+        <div class="event">
+          <h4>Online CTF Challenge – August Edition</h4>
+          <p>🏆 Prizes up to $500 | 🎮 Starts: August 10, 2025</p>
+          <p>Sign up via your dashboard and prove your skills on the leaderboard!</p>
+        </div>
+      </section>
+
+      <!-- Tool of the Month -->
+      <section class="feature-box">
+        <h2>🛠 Tool of the Month: VulnHunter Pro</h2>
+        <div class="tool-card">
+          <p><strong>Author:</strong> KasauSec Team</p>
+          <p><strong>Description:</strong> An advanced vulnerability scanner that detects OWASP Top 10, RCEs, and more using fast enumeration and clean reporting.</p>
+          <a class="button" href="/tools/vulnhunter.html">Try VulnHunter Pro →</a>
+        </div>
+      </section>
+
+      <!-- Top Contributors -->
+      <section class="feature-box">
+        <h2>🎓 Top Contributors This Month</h2>
+        <div class="contributor">
+          <p><strong>@CyberKenya</strong> — 15 CTF solves, 2 bug disclosures, 3 forum tutorials</p>
+        </div>
+        <div class="contributor">
+          <p><strong>@JaneByte</strong> — Built the KasauXSS fuzzing engine, submitted 4 CVEs</p>
+        </div>
+      </section>
+
+      <!-- Newsletter Signup -->
+      <section class="feature-box newsletter">
+        <h2>📥 Join Our Cyber Bulletin</h2>
+        <p>Get weekly updates, community stories, tool tips, and job opportunities. No spam.</p>
+        <form>
+          <input type="email" placeholder="you@example.com" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="wrapper">
+  <div class="container">
+    <div>
+      <p>InfoSec Tools</p>
+      <a href="/tools/">Security Toolkit</a>
+      <a href="/tools/vulnhunter.html">VulnHunter Pro</a>
+      <a href="/labs/">Try Labs</a>
+    </div>
+    <div>
+      <p>Vulnerabilities</p>
+      <a href="/web-security/xss">XSS</a>
+      <a href="/web-security/sqli">SQLi</a>
+      <a href="/web-security/ssrf">SSRF</a>
+      <a href="/web-security/xxe">XXE</a>
+    </div>
+    <div>
+      <p>Community</p>
+      <a href="/community/">Forums</a>
+      <a href="/community/testimonials.html">Testimonials</a>
+      <a href="/events/">Events</a>
+    </div>
+    <div>
+      <p>Company</p>
+      <a href="/about/">About</a>
+      <a href="/careers/">Careers</a>
+      <a href="/legal/">Legal</a>
+    </div>
+    <div>
+      <p>Insights</p>
+      <a href="/blog/">Blog</a>
+      <a href="/research/">Research</a>
+      <a href="/newsletter/">Newsletter</a>
+    </div>
+    <div>
+      <a href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"/></a>
+      <a class="button" href="https://twitter.com/InfoSecKe" rel="noreferrer">Follow Us</a>
+      <p class="grey">&copy; 2025 InfoSecKe. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
