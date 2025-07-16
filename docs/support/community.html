@@ -1,61 +1,174 @@
-<main>
-  <section class="page-section">
-    <h1>Our Community</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body.dark-mode { background: #121212; color: #f0f0f0; }
+    .dark-mode .sidebar, .dark-mode .content, .dark-mode footer { background-color: #1a1a1a; color: #f0f0f0; }
+    .progress-bar { height: 4px; background: #00bfff; position: fixed; top: 0; left: 0; z-index: 1000; width: 0%; transition: width 0.2s; }
+    .page-header, .wrapper { padding: 1rem 2rem; }
+    .container { display: flex; flex-wrap: wrap; justify-content: space-between; }
+    .feature-box, .testimonial, .event, .tool-card, .contributor, .newsletter { margin: 2rem 0; border: 1px solid #ccc; padding: 1rem; border-radius: 8px; background: #fff; }
+    .dark-mode .feature-box, .dark-mode .testimonial, .dark-mode .event, .dark-mode .tool-card, .dark-mode .contributor, .dark-mode .newsletter {
+      background-color: #2a2a2a; border-color: #444;
+    }
+    .button { padding: 0.5rem 1rem; background: #007bff; color: #fff; border-radius: 4px; text-decoration: none; }
+    .button:hover { background: #0056b3; }
+    .newsletter input[type="email"] { padding: 0.5rem; width: 70%; margin-right: 1rem; border-radius: 4px; border: 1px solid #ccc; }
+    .newsletter button { padding: 0.5rem 1rem; border: none; background: #28a745; color: #fff; border-radius: 4px; }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+    window.onscroll = function () {
+      var scrolled = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+  </script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
 
-    <h2>Welcome to the InfoSecKe Cybersecurity Community</h2>
-    <p>
-      InfoSecKe is more than an initiative — it’s a living, breathing community of cybersecurity enthusiasts, ethical hackers, students, developers, defenders, bug bounty hunters, and information security professionals. Our mission goes beyond technology; it's about uniting minds around a shared vision of a safer digital future for Kenya and Africa.
-    </p>
+<!-- Header -->
+<header class="page-header">
+  <div class="container">
+    <a class="logo" href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"></a>
+    <div class="header-right">
+      <input type="text" placeholder="Search..." />
+      <button onclick="toggleDarkMode()">🌙</button>
+      <a class="button" href="/account/profile.html">My Account</a>
+    </div>
+  </div>
+  <div class="container">
+    <nav>
+      <a href="/customers">Customers</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/careers">Careers</a>
+      <a href="/legal">Legal</a>
+      <a href="/contact">Contact</a>
+      <a href="/support/reseller-faqs">Resellers</a>
+    </nav>
+  </div>
+</header>
 
-    <h3>Why Community Matters</h3>
-    <p>
-      In cybersecurity, knowledge grows exponentially when shared. That’s why we built InfoSecKe as an open platform where members can learn, collaborate, compete, and contribute together. Whether you're a newcomer trying to understand OWASP Top 10, a SOC analyst defending real infrastructure, or a pentester disclosing vulnerabilities — your voice is essential.
-    </p>
+<div class="layout">
+  <div class="content">
+    <main>
+      <h1>Welcome to the InfoSecKe Community</h1>
+      <p>The InfoSecKe community is your gateway to Kenya’s fastest-growing cybersecurity network. Learn, connect, share, and level up your skills with passionate individuals from all walks of life.</p>
 
-    <h3>What Makes Our Community Unique</h3>
-    <ul>
-      <li><strong>Inclusive for All Levels:</strong> We welcome everyone — from absolute beginners to seasoned experts — and support growth at every stage.</li>
-      <li><strong>Ethical and Responsible:</strong> We uphold the highest standards of responsible disclosure and ethical behavior.</li>
-      <li><strong>Built on Collaboration:</strong> Our platforms encourage peer-to-peer mentorship, team-based CTFs, and collaborative research.</li>
-      <li><strong>Locally Relevant:</strong> We tailor our content and tools to match the unique cyber landscape of Kenya and East Africa.</li>
-    </ul>
+      <!-- Testimonials -->
+      <section class="feature-box">
+        <h2>📣 Testimonials</h2>
+        <div class="testimonial">
+          <p>“Joining InfoSecKe completely changed my career. The community helped me land my first bug bounty!” — <strong>@CodeHacker</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>“The mentorship program and CTFs taught me more in 2 months than a full year of training.” — <strong>@NairobiNinja</strong></p>
+        </div>
+      </section>
 
-    <h3>Community Features</h3>
-    <ol>
-      <li><strong>Forums and Groups:</strong> Public and private channels for discussing everything from vulnerability research to job opportunities.</li>
-      <li><strong>Bug Bounty Directory:</strong> A curated list of local and global bounty programs with community-submitted writeups.</li>
-      <li><strong>Mentorship Program:</strong> Connect with a mentor in red teaming, blue teaming, reverse engineering, or DevSecOps.</li>
-      <li><strong>HackTogether Events:</strong> Participate in group-based hacking sprints, web app challenges, and lab walkthroughs.</li>
-      <li><strong>Local Meetups:</strong> Monthly hybrid (online + offline) events featuring workshops, keynotes, and networking.</li>
-      <li><strong>Women in Cyber:</strong> A safe space and initiative to support, train, and promote women in Kenyan cybersecurity.</li>
-      <li><strong>CTF League:</strong> Compete in our monthly Capture the Flag (CTF) events — solo or as a team — with rankings and prizes.</li>
-      <li><strong>Contribute to Open Source:</strong> Help us build tools like <code>VulnHunter Pro</code>, <code>KasauXSS</code>, and our upcoming <code>Auto-Vuln Lab Generator</code>.</li>
-    </ol>
+      <!-- Events -->
+      <section class="feature-box">
+        <h2>📅 Upcoming Events</h2>
+        <div class="event">
+          <h4>Cyber Saturday Meetup – Nairobi</h4>
+          <p>📍 Nairobi Garage | 🕒 August 3, 2025</p>
+          <p>Meet fellow hackers, listen to speakers, and solve live web labs!</p>
+        </div>
+        <div class="event">
+          <h4>Online CTF Challenge – August Edition</h4>
+          <p>🏆 Prizes up to $500 | 🎮 Starts: August 10, 2025</p>
+          <p>Sign up via your dashboard and prove your skills on the leaderboard!</p>
+        </div>
+      </section>
 
-    <h3>Ongoing Projects You Can Join</h3>
-    <ul>
-      <li><strong>InfoSecKe Labs:</strong> Hands-on challenge environments to practice real-world exploitation.</li>
-      <li><strong>Cyber Awareness Outreach:</strong> Help us teach digital hygiene in schools and rural communities.</li>
-      <li><strong>Research Publications:</strong> Contribute whitepapers, exploit breakdowns, and threat intelligence reports.</li>
-      <li><strong>Tool Development:</strong> Collaborate on building or improving our reconnaissance and exploitation tools.</li>
-    </ul>
+      <!-- Tool of the Month -->
+      <section class="feature-box">
+        <h2>🛠 Tool of the Month: VulnHunter Pro</h2>
+        <div class="tool-card">
+          <p><strong>Author:</strong> KasauSec Team</p>
+          <p><strong>Description:</strong> An advanced vulnerability scanner that detects OWASP Top 10, RCEs, and more using fast enumeration and clean reporting.</p>
+          <a class="button" href="/tools/vulnhunter.html">Try VulnHunter Pro →</a>
+        </div>
+      </section>
 
-    <h3>Join Us</h3>
-    <p>
-      Ready to dive in? Becoming part of InfoSecKe is simple:
-    </p>
-    <ol>
-      <li>Sign up and build your profile via our <a href="/account/register.html">Register</a> page.</li>
-      <li>Introduce yourself in the <a href="/community/intro-forum.html">#introductions</a> channel.</li>
-      <li>Pick a challenge, contribute to a project, or apply for mentorship.</li>
-    </ol>
+      <!-- Top Contributors -->
+      <section class="feature-box">
+        <h2>🎓 Top Contributors This Month</h2>
+        <div class="contributor">
+          <p><strong>@CyberKenya</strong> — 15 CTF solves, 2 bug disclosures, 3 forum tutorials</p>
+        </div>
+        <div class="contributor">
+          <p><strong>@JaneByte</strong> — Built the KasauXSS fuzzing engine, submitted 4 CVEs</p>
+        </div>
+      </section>
 
-    <h3>Community Code of Conduct</h3>
-    <p>
-      We are committed to maintaining a respectful, harassment-free environment for all members. Harassment of any kind will not be tolerated. Be kind, stay curious, and help others grow.
-    </p>
+      <!-- Newsletter Signup -->
+      <section class="feature-box newsletter">
+        <h2>📥 Join Our Cyber Bulletin</h2>
+        <p>Get weekly updates, community stories, tool tips, and job opportunities. No spam.</p>
+        <form>
+          <input type="email" placeholder="you@example.com" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</div>
 
-    <p><a class="button" href="/community/join.html">Join the Community →</a></p>
-  </section>
-</main>
-
+<!-- Footer -->
+<footer class="wrapper">
+  <div class="container">
+    <div>
+      <p>InfoSec Tools</p>
+      <a href="/tools/">Security Toolkit</a>
+      <a href="/tools/vulnhunter.html">VulnHunter Pro</a>
+      <a href="/labs/">Try Labs</a>
+    </div>
+    <div>
+      <p>Vulnerabilities</p>
+      <a href="/web-security/xss">XSS</a>
+      <a href="/web-security/sqli">SQLi</a>
+      <a href="/web-security/ssrf">SSRF</a>
+      <a href="/web-security/xxe">XXE</a>
+    </div>
+    <div>
+      <p>Community</p>
+      <a href="/community/">Forums</a>
+      <a href="/community/testimonials.html">Testimonials</a>
+      <a href="/events/">Events</a>
+    </div>
+    <div>
+      <p>Company</p>
+      <a href="/about/">About</a>
+      <a href="/careers/">Careers</a>
+      <a href="/legal/">Legal</a>
+    </div>
+    <div>
+      <p>Insights</p>
+      <a href="/blog/">Blog</a>
+      <a href="/research/">Research</a>
+      <a href="/newsletter/">Newsletter</a>
+    </div>
+    <div>
+      <a href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"/></a>
+      <a class="button" href="https://twitter.com/InfoSecKe" rel="noreferrer">Follow Us</a>
+      <p class="grey">&copy; 2025 InfoSecKe. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
