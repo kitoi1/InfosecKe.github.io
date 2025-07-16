@@ -3,68 +3,367 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InfoSecKe – Empowering Cybersecurity in Kenya</title>
+  <title>InfoSecKe – Cybersecurity Training & Resources for Kenya</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
-<body>
-  <header>
-    <h1>Welcome to InfoSecKe</h1>
-    <p>Your central hub for cybersecurity awareness, learning, and empowerment in Kenya.</p>
-    <nav>
-      <ul>
-        <li><a href="about/mission.html">About</a></li>
-        <li><a href="learn/basics.html">Learn</a></li>
-        <li><a href="training/courses.html">Training</a></li>
-        <li><a href="tools/kali-tools.html">Tools</a></li>
-        <li><a href="community/community.html">Community</a></li>
-        <li><a href="support/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="homepage">
+  <div class="layout">
+    <header class="main-header">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="assets/images/logo.svg" alt="InfoSecKe Logo" class="logo">
+          <h1>InfoSecKe</h1>
+          <p class="tagline">Building Kenya's Cybersecurity Capacity</p>
+        </div>
+        
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="about/mission.html"><i class="fas fa-bullseye"></i> About</a></li>
+            <li><a href="learn/basics.html"><i class="fas fa-book-open"></i> Learn</a></li>
+            <li><a href="training/courses.html"><i class="fas fa-graduation-cap"></i> Training</a></li>
+            <li><a href="cyber-range/"><i class="fas fa-flask"></i> Cyber Range</a></li>
+            <li><a href="community/community.html"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="research/kenya-cyber-laws.html"><i class="fas fa-scale-balanced"></i> Research</a></li>
+          </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+          <a href="auth/login.php" class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a href="auth/register.php" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <section>
-      <h2>Our Mission</h2>
-      <p>To raise cybersecurity awareness, promote digital resilience, and build the next generation of ethical hackers and security experts across Kenya and beyond.</p>
-      <img src="assets/images/mission-banner.jpg" alt="Cybersecurity mission banner" style="width: 100%; max-width: 800px;">
+    <main class="home-main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Empowering Kenya's Digital Defense</h2>
+          <p>Join East Africa's fastest growing cybersecurity community with hands-on labs, certifications, and real-world threat simulations</p>
+          <div class="hero-cta">
+            <a href="training/pathways/" class="btn btn-large"><i class="fas fa-map-marked-alt"></i> Start Learning Path</a>
+            <a href="cyber-range/" class="btn btn-large btn-secondary"><i class="fas fa-laptop-code"></i> Try Our Labs</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/images/cyber-hero.svg" alt="Cybersecurity illustration">
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <section class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Interactive Labs</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5,000+</span>
+          <span class="stat-label">Community Members</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Certification Paths</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Cyber Range Access</span>
+        </div>
+      </section>
+
+      <!-- Learning Paths -->
+      <section class="learning-paths">
+        <h2><i class="fas fa-route"></i> Structured Learning Paths</h2>
+        <p class="section-intro">Choose your cybersecurity specialization with our guided training programs</p>
+        
+        <div class="path-cards">
+          <div class="path-card red-team">
+            <div class="path-icon">
+              <i class="fas fa-user-secret"></i>
+            </div>
+            <h3>Red Team Path</h3>
+            <p>Master offensive security techniques and ethical hacking</p>
+            <ul class="path-highlights">
+              <li>Penetration Testing</li>
+              <li>Exploit Development</li>
+              <li>Social Engineering</li>
+            </ul>
+            <a href="training/pathways/red-team.html" class="btn btn-small">Explore Path</a>
+          </div>
+          
+          <div class="path-card blue-team">
+            <div class="path-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Blue Team Path</h3>
+            <p>Develop defensive security and incident response skills</p>
+            <ul class="path-highlights">
+              <li>SIEM Management</li>
+              <li>Threat Hunting</li>
+              <li>DFIR</li>
+            </ul>
+            <a href="training/pathways/blue-team.html" class="btn btn-small">Explore Path</a>
+          </div>
+          
+          <div class="path-card bug-bounty">
+            <div class="path-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <h3>Bug Bounty Path</h3>
+            <p>Learn web app security and vulnerability disclosure</p>
+            <ul class="path-highlights">
+              <li>Web App Testing</li>
+              <li>Report Writing</li>
+              <li>Platforms</li>
+            </ul>
+            <a href="training/pathways/bug-bounty.html" class="btn btn-small">Explore Path</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Labs -->
+      <section class="featured-labs">
+        <h2><i class="fas fa-flask"></i> Featured Cyber Range Labs</h2>
+        <p class="section-intro">Hands-on simulations from our interactive cyber range</p>
+        
+        <div class="lab-cards">
+          <div class="lab-card">
+            <div class="lab-difficulty beginner">Beginner</div>
+            <div class="lab-image">
+              <img src="assets/images/labs/sqli-lab.jpg" alt="SQL Injection Lab">
+            </div>
+            <div class="lab-content">
+              <h3>Web App: SQL Injection</h3>
+              <p>Exploit vulnerable login forms using SQLi techniques</p>
+              <div class="lab-meta">
+                <span><i class="fas fa-clock"></i> 2 hours</span>
+                <span><i class="fas fa-tags"></i> Web, OWASP</span>
+              </div>
+              <a href="cyber-range/web-apps/sqli/" class="btn btn-small">Start Lab</a>
+            </div>
+          </div>
+          
+          <div class="lab-card">
+            <div class="lab-difficulty intermediate">Intermediate</div>
+            <div class="lab-image">
+              <img src="assets/images/labs/ad-lab.jpg" alt="Active Directory Lab">
+            </div>
+            <div class="lab-content">
+              <h3>Active Directory Attack</h3>
+              <p>Practice Kerberoasting and lateral movement</p>
+              <div class="lab-meta">
+                <span><i class="fas fa-clock"></i> 4 hours</span>
+                <span><i class="fas fa-tags"></i> Windows, Red Team</span>
+              </div>
+              <a href="cyber-range/network/ad-attack/" class="btn btn-small">Start Lab</a>
+            </div>
+          </div>
+          
+          <div class="lab-card">
+            <div class="lab-difficulty advanced">Advanced</div>
+            <div class="lab-image">
+              <img src="assets/images/labs/binary-lab.jpg" alt="Binary Exploitation Lab">
+            </div>
+            <div class="lab-content">
+              <h3>Buffer Overflow</h3>
+              <p>Stack-based overflow exploitation</p>
+              <div class="lab-meta">
+                <span><i class="fas fa-clock"></i> 6 hours</span>
+                <span><i class="fas fa-tags"></i> Binary, Exploit Dev</span>
+              </div>
+              <a href="cyber-range/binary/buffer-overflow/" class="btn btn-small">Start Lab</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-cta">
+          <a href="cyber-range/" class="btn"><i class="fas fa-arrow-right"></i> View All Labs</a>
+        </div>
+      </section>
+
+      <!-- Upcoming Events -->
+      <section class="events-section">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Cybersecurity Events</h2>
+        
+        <div class="event-tabs">
+          <button class="event-tab active" data-tab="local">Local Events</button>
+          <button class="event-tab" data-tab="global">Global Conferences</button>
+          <button class="event-tab" data-tab="workshops">Workshops</button>
+        </div>
+        
+        <div class="event-content active" id="local">
+          <div class="event-card">
+            <div class="event-date">
+              <span class="day">15</span>
+              <span class="month">Jul</span>
+            </div>
+            <div class="event-details">
+              <h3>Nairobi Cybersecurity Meetup</h3>
+              <p class="event-meta"><i class="fas fa-map-marker-alt"></i> iHub Nairobi | <i class="fas fa-clock"></i> 6:00 PM EAT</p>
+              <p>Monthly gathering for security professionals with talks on cloud security threats</p>
+              <a href="community/events/nairobi-july-2024.html" class="btn btn-small">Details</a>
+            </div>
+          </div>
+          
+          <div class="event-card">
+            <div class="event-date">
+              <span class="day">28</span>
+              <span class="month">Aug</span>
+            </div>
+            <div class="event-details">
+              <h3>Africa Cyber Defense Forum 2024</h3>
+              <p class="event-meta"><i class="fas fa-map-marker-alt"></i> KICC Nairobi | <i class="fas fa-clock"></i> All Day</p>
+              <p>East Africa's premier cybersecurity conference with international speakers</p>
+              <a href="https://www.africacyberdefenseforum.com/" target="_blank" class="btn btn-small">Register</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-cta">
+          <a href="community/events.html" class="btn"><i class="fas fa-arrow-right"></i> View All Events</a>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section class="resources-section">
+        <h2><i class="fas fa-book-open"></i> Essential Resources</h2>
+        
+        <div class="resource-grid">
+          <a href="tools/kali-tools.html" class="resource-card">
+            <div class="resource-icon">
+              <i class="fab fa-linux"></i>
+            </div>
+            <h3>Kali Tools Guide</h3>
+            <p>Master the Kali Linux toolkit</p>
+          </a>
+          
+          <a href="research/kenya-cyber-laws.html" class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3>Kenya Cyber Laws</h3>
+            <p>Understand legal frameworks</p>
+          </a>
+          
+          <a href="resources/cheat-sheets.html" class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-file-code"></i>
+            </div>
+            <h3>Cheat Sheets</h3>
+            <p>Quick reference guides</p>
+          </a>
+          
+          <a href="threats/threat-reports.html" class="resource-card">
+            <div class="resource-icon">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h3>Threat Reports</h3>
+            <p>Latest intelligence</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Community Spotlight -->
+      <section class="community-spotlight">
+        <h2><i class="fas fa-users"></i> Community Spotlight</h2>
+        
+        <div class="testimonial-carousel">
+          <div class="testimonial">
+            <img src="assets/images/community/jane.jpg" alt="Jane K." class="testimonial-avatar">
+            <blockquote>
+              "The cyber range labs helped me transition from network admin to security analyst in just 6 months. The realistic scenarios were exactly what employers wanted."
+              <cite>Jane K., Security Analyst at Safaricom</cite>
+            </blockquote>
+          </div>
+        </div>
+        
+        <div class="community-stats">
+          <div class="community-stat">
+            <i class="fas fa-comments"></i>
+            <h3>Active Discussions</h3>
+            <p>Join our growing forum with 500+ daily posts</p>
+            <a href="community/forums/" class="btn btn-small">Visit Forums</a>
+          </div>
+          
+          <div class="community-stat">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Mentorship</h3>
+            <p>Get paired with experienced security professionals</p>
+            <a href="community/mentorship.html" class="btn btn-small">Find a Mentor</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-content">
+        <h2><i class="fas fa-envelope"></i> Stay Updated</h2>
+        <p>Subscribe to our newsletter for new lab releases, security alerts, and event announcements</p>
+        
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+        
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Explore Our Key Content</h2>
-      <ul>
-        <li><a href="learn/web-security.html">Web Security</a></li>
-        <li><a href="training/labs.html">Interactive Labs</a></li>
-        <li><a href="tools/free-tools.html">Free Tools</a></li>
-        <li><a href="research/cyberlaws.html">Cyber Laws in Kenya</a></li>
-        <li><a href="resources/books.html">Recommended Books</a></li>
-        <li><a href="community/events.html">Events & Workshops</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Recent Cybersecurity Events</h2>
-      <article>
-        <h3><a href="https://www.africacyberdefenseforum.com/" target="_blank">Africa Cyber Defense Forum 2024</a></h3>
-        <img src="assets/images/acdf-2024.jpg" alt="Africa Cyber Defense Forum 2024" style="width: 100%; max-width: 800px;">
-        <p>Africa's premier cybersecurity summit held in Nairobi — bringing together CISOs, researchers, and law enforcement to tackle emerging cyber threats in the region.</p>
-      </article>
-
-      <article>
-        <h3><a href="https://www.defcon.org/" target="_blank">DEF CON 32 – Las Vegas, 2024</a></h3>
-        <img src="assets/images/defcon32.jpg" alt="DEF CON 32 event photo" style="width: 100%; max-width: 800px;">
-        <p>The global hacker conference featuring talks on advanced exploitation, social engineering, lockpicking, and red team operations.</p>
-      </article>
-
-      <article>
-        <h3><a href="https://cyberweek.ae/" target="_blank">Dubai Cyber Week 2024</a></h3>
-        <img src="assets/images/dubai-cyberweek.jpg" alt="Dubai Cyber Week event photo" style="width: 100%; max-width: 800px;">
-        <p>Global thought leaders meet to showcase cybersecurity trends, innovations, and AI-driven threat analysis platforms in the Middle East.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="legal/privacy.html">Privacy Policy</a> | <a href="legal/terms.html">Terms of Service</a></p>
-  </footer>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>InfoSecKe</h3>
+          <ul>
+            <li><a href="about/mission.html">Our Mission</a></li>
+            <li><a href="about/team.html">Team</a></li>
+            <li><a href="about/partners.html">Partners</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Training</h3>
+          <ul>
+            <li><a href="training/courses.html">Courses</a></li>
+            <li><a href="training/certifications.html">Certifications</a></li>
+            <li><a href="cyber-range/">Cyber Range</a></li>
+            <li><a href="training/bug-bounty-path.html">Bug Bounty</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="tools/kali-tools.html">Tools</a></li>
+            <li><a href="resources/cheat-sheets.html">Cheat Sheets</a></li>
+            <li><a href="research/cyberlaws.html">Cyber Laws</a></li>
+            <li><a href="threats/threat-reports.html">Threat Reports</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="support/faq.html">FAQ</a></li>
+            <li><a href="support/contact.html">Contact</a></li>
+            <li><a href="support/disclosure.html">Disclosure</a></li>
+            <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 InfoSecKe. All rights reserved. | Cybersecurity for Kenya's Digital Future</p>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
