@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ – InfoSecKe Support</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body.dark-mode { background: #121212; color: #f0f0f0; }
+    .faq-container { max-width: 900px; margin: 2rem auto; padding: 1rem; }
+    .faq-item { border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1rem; background: #fff; }
+    .dark-mode .faq-item { background: #1e1e1e; border-color: #444; }
+    .faq-question { padding: 1rem; cursor: pointer; position: relative; font-weight: bold; }
+    .faq-question::after { content: "+"; position: absolute; right: 20px; font-size: 1.5rem; }
+    .faq-item.active .faq-question::after { content: "−"; }
+    .faq-answer { display: none; padding: 1rem; border-top: 1px solid #ccc; }
+    .faq-item.active .faq-answer { display: block; }
+    .page-header, .wrapper, .container { padding: 1rem 2rem; }
+  </style>
+  <script>
+    window.onload = () => {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+      document.querySelectorAll('.faq-question').forEach((q) => {
+        q.onclick = () => {
+          q.parentElement.classList.toggle('active');
+        };
+      });
+    };
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+  </script>
+</head>
+<body>
+
+<!-- Header -->
+<header class="page-header">
+  <div class="container">
+    <a class="logo" href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"></a>
+    <div class="header-right">
+      <input type="text" placeholder="Search support..." />
+      <button onclick="toggleDarkMode()">🌙</button>
+      <a class="button" href="/account/profile.html">My Account</a>
+    </div>
+  </div>
+  <div class="container">
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/community/">Community</a>
+      <a href="/support/">Support</a>
+      <a href="/events/">Events</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- FAQ Section -->
+<main class="faq-container">
+  <h1>🔧 Frequently Asked Questions</h1>
+  <p>Find answers to common questions and troubleshooting help for InfoSecKe tools, account issues, and participation in events.</p>
+
+  <div class="faq-item">
+    <div class="faq-question">🔐 How do I reset my account password?</div>
+    <div class="faq-answer">Go to the <a href="/account/reset-password.html">password reset</a> page, enter your email, and follow the link sent to your inbox. Make sure to check your spam folder.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">📧 I'm not receiving newsletter or email confirmations</div>
+    <div class="faq-answer">Ensure emails from <code>@infosecke.org</code> are not blocked or sent to spam. Add us to your safe sender list and verify that your email is correctly listed in your profile.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">🛠 Why won't the vulnerability scanner run on my machine?</div>
+    <div class="faq-answer">Make sure you're using Linux or WSL, have the latest version of Go or Python installed, and have granted the tool permissions (e.g., with <code>chmod +x</code>). Visit our <a href="/tools/vulnhunter.html#requirements">VulnHunter docs</a> for full instructions.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">🎮 How do I join a CTF or bug bounty?</div>
+    <div class="faq-answer">Visit the <a href="/events/">Events</a> page, find an active challenge, and click “Register.” For bounties, check our partners or the Hall of Fame for targets accepting submissions.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">💬 Can I get mentorship or join local meetups?</div>
+    <div class="faq-answer">Yes! Head to the <a href="/community/">Community</a> page and apply for mentorship or join one of our Telegram/Discord regional meetups in Kenya.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">⚙️ Where can I report a bug or feature request?</div>
+    <div class="faq-answer">Submit issues via our <a href="/contact.html">contact form</a> or file a GitHub issue on our <a href="https://github.com/InfoSecKe">open-source repos</a>.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">📂 How can I contribute to InfoSecKe’s tools?</div>
+    <div class="faq-answer">We love contributors! Start by checking out our <a href="/tools/">Tools</a> page, clone a repo, and submit PRs. Make sure to follow the contribution guidelines in each project.</div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="wrapper">
+  <div class="container">
+    <div>
+      <p>Support & Help</p>
+      <a href="/support/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/support/report.html">Report a bug</a>
+    </div>
+    <div>
+      <p>Community</p>
+      <a href="/community/">Forums</a>
+      <a href="/events/">Events</a>
+      <a href="/community/testimonials.html">Testimonials</a>
+    </div>
+    <div>
+      <p>Security</p>
+      <a href="/tools/vulnhunter.html">VulnHunter</a>
+      <a href="/labs/">Try Labs</a>
+      <a href="/web-security/">Vulnerability Library</a>
+    </div>
+    <div>
+      <p>InfoSecKe</p>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/careers/">Careers</a>
+    </div>
+    <div>
+      <a href="/"><img src="/assets/images/logo.png" alt="InfoSecKe Logo" height="40"/></a>
+      <p class="grey">&copy; 2025 InfoSecKe. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
