@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VM Lab Setup Guide – InfoSecKe</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Training</h2>
+      <ul>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="labs.html">Labs</a></li>
+        <li><a href="vm-guide.html" class="active">VM Guide</a></li>
+        <li><a href="setup-tools.html">Setup Tools</a></li>
+        <li><a href="bug-bounty-path.html">Bug Bounty Path</a></li>
+        <li><a href="practice-platforms.html">Practice Platforms</a></li>
+      </ul>
+      <button id="themeToggle">🌓 Theme</button>
+    </aside>
+
+    <div class="content">
+      <header>
+        <h1>Setting Up Your VM Lab</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/mission.html">About</a></li>
+            <li><a href="../support/contact.html">Support</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <p>Having your own local pentest lab is crucial for becoming a hands-on ethical hacker. Here's how you can build one using free tools and vulnerable machines like Metasploitable, DVWA, and more.</p>
+
+          <h2>🧰 What You Need</h2>
+          <ul>
+            <li>⚙️ <strong>Virtualization Software:</strong> <a href="https://www.virtualbox.org" target="_blank">VirtualBox</a> or <a href="https://www.vmware.com/products/workstation-player.html" target="_blank">VMware</a></li>
+            <li>🐉 <strong>Attacker Machine:</strong> Kali Linux or Parrot OS</li>
+            <li>💥 <strong>Targets:</strong> DVWA, Metasploitable 2, VulnHub machines</li>
+            <li>📡 <strong>Network Setup:</strong> Host-only or Internal Network</li>
+          </ul>
+
+          <h2>🧪 Example Lab Setup</h2>
+          <img src="../assets/images/vm/vm-lab-diagram.png" alt="VM Lab Diagram" class="wide"/>
+
+          <ol>
+            <li>Download <strong>Kali Linux</strong> ISO from <a href="https://www.kali.org/get-kali/" target="_blank">kali.org</a>.</li>
+            <li>Import into VirtualBox and configure 2GB RAM, 2 CPUs, and a host-only network.</li>
+            <li>Download <strong>Metasploitable 2</strong> from <a href="https://sourceforge.net/projects/metasploitable/" target="_blank">SourceForge</a> and add it as a second VM.</li>
+            <li>Ensure both machines are on the same internal network.</li>
+            <li>Boot both VMs and run <code>netdiscover</code> from Kali to find Metasploitable’s IP.</li>
+          </ol>
+
+          <h3>🧠 Tip:</h3>
+          <p>Use <code>nmap</code> to scan the target VM and identify open services before exploiting them.</p>
+
+          <h2>📹 Setup Video</h2>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/1GJdJnmW8k8" title="How to Setup a Pentest Lab" frameborder="0" allowfullscreen></iframe>
+
+          <h2>🌐 Popular Vulnerable VMs</h2>
+          <ul>
+            <li><a href="https://www.vulnhub.com/entry/dvwa-damn-vulnerable-web-app,38/" target="_blank">DVWA – Web app security training</a></li>
+            <li><a href="https://www.vulnhub.com/series/basement,245/" target="_blank">Basement Series – Great for privilege escalation</a></li>
+            <li><a href="https://www.vulnhub.com/entry/hackmebank-1,252/" target="_blank">HackMeBank – Simulated banking app</a></li>
+          </ul>
+
+          <h2>🧑‍💻 Download Links</h2>
+          <ul>
+            <li><a href="https://www.kali.org/get-kali/" target="_blank">Kali Linux ISO</a></li>
+            <li><a href="https://sourceforge.net/projects/metasploitable/" target="_blank">Metasploitable 2</a></li>
+            <li><a href="https://vulnhub.com" target="_blank">More VMs on VulnHub</a></li>
+          </ul>
+
+          <h2>📁 Bonus: Build Your Own VM</h2>
+          <p>You can create custom vulnerable VMs for practice using tools like:</p>
+          <ul>
+            <li><a href="https://github.com/digininja/DVWA" target="_blank">DVWA (PHP Vulnerable App)</a></li>
+            <li><a href="https://github.com/bkimminich/juice-shop" target="_blank">OWASP Juice Shop</a></li>
+            <li><a href="https://github.com/ethicalhack3r/DVWA" target="_blank">Mutillidae</a></li>
+          </ul>
+
+          <h2>📦 Next Steps</h2>
+          <p>Once you're done setting up your lab, head over to <a href="labs.html">Labs</a> to begin practicing exploitation, enumeration, and privilege escalation techniques in a safe, legal environment.</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 InfoSecKe. All rights reserved. | <a href="../legal/privacy.html">Privacy</a> | <a href="../legal/terms.html">Terms</a></p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
