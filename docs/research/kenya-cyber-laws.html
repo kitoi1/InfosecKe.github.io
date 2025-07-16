@@ -2,40 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kenya Cyber Laws – InfoSecKe</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <script defer src="/assets/js/main.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/main.js"></script>
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    .sidebar {
+      transition: transform 0.3s ease;
+    }
+    .sidebar.collapsed {
+      transform: translateX(-100%);
+    }
+    .toggle-sidebar {
+      display: none;
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .toggle-sidebar {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Enhanced InfoSecKe Header -->
   <header class="page-header" id="top">
     <div class="container">
-      <a class="logo" href="/"><img src="/assets/images/logo.svg" alt="InfoSecKe Logo" /></a>
+      <a class="logo" href="../index.html"><img src="../assets/images/logo.svg" alt="InfoSecKe Logo" /></a>
       <div class="header-right">
         <div class="login-buttons">
-          <a class="button-orange-small" href="/auth/dashboard.html">My Account</a>
+          <a class="button-orange-small" href="../account/profile.html">My account</a>
         </div>
-        <input type="checkbox" id="hamburger-mobile" class="hamburger-input-mobile" />
-        <input type="radio" id="hamburger-desktop" class="hamburger-input-desktop" name="mega-nav-input" />
+        <input type="checkbox" id="hamburger-mobile" class="hamburger-input-mobile">
+        <input type="radio" id="hamburger-desktop" class="hamburger-input-desktop" name="mega-nav-input">
         <div class="hamburger-menu-mobile">
           <label class="hamburger-menu-label header-hidden" for="hamburger-mobile">
             <span class="hamburger-layers"></span>
           </label>
         </div>
         <div class="mega-nav">
+          <input type="radio" id="mega-nav-close" class="mega-nav-input-close" name="mega-nav-input">
+          <input type="radio" id="mega-nav-label-1" class="mega-nav-input-1" name="mega-nav-input">
           <div class="hamburger-menu-desktop">
             <label class="hamburger-menu-label header-show" for="hamburger-desktop">
               <span class="hamburger-layers"></span>
             </label>
             <div>
-              <a class="hamburger-menu-desktop-link" href="/about/mission.html"><span class="mega-nav-text">About</span></a>
-              <a class="hamburger-menu-desktop-link" href="/blog/"><span class="mega-nav-text">Blog</span></a>
-              <a class="hamburger-menu-desktop-link" href="/careers/"><span class="mega-nav-text">Careers</span></a>
-              <a class="hamburger-menu-desktop-link" href="/legal/privacy.html"><span class="mega-nav-text">Privacy</span></a>
-              <a class="hamburger-menu-desktop-link" href="/support/contact.html"><span class="mega-nav-text">Contact</span></a>
-              <a class="hamburger-menu-desktop-link" href="/partners/"><span class="mega-nav-text">Partners</span></a>
+              <a class="hamburger-menu-desktop-link" href="../dashboard.html"><span class="mega-nav-text">Dashboard</span></a>
+              <a class="hamburger-menu-desktop-link" href="../about/mission.html"><span class="mega-nav-text">About</span></a>
+              <a class="hamburger-menu-desktop-link" href="../blog/index.html"><span class="mega-nav-text">Blog</span></a>
+              <a class="hamburger-menu-desktop-link" href="../training/courses.html"><span class="mega-nav-text">Training</span></a>
+              <a class="hamburger-menu-desktop-link" href="../legal/privacy.html"><span class="mega-nav-text">Privacy</span></a>
+              <a class="hamburger-menu-desktop-link" href="../support/contact.html"><span class="mega-nav-text">Contact</span></a>
+              <a class="hamburger-menu-desktop-link" href="../partners.html"><span class="mega-nav-text">Partners</span></a>
             </div>
           </div>
         </div>
@@ -43,7 +71,23 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+    <div class="content">
+  <div class="layout">
+    <button class="toggle-sidebar" onclick="document.querySelector('.sidebar').classList.toggle('collapsed')">☰ Menu</button>
+    <aside class="sidebar">
+      <h2>Learn</h2>
+      <ul>
+        <li><a href="basics.html">Cybersecurity Basics</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="protocols.html">Protocols</a></li>
+        <li><a href="encryption.html">Encryption</a></li>
+        <li><a href="web-security.html">Web Security</a></li>
+        <li><a href="cloud-security.html">Cloud Security</a></li>
+        <li><a href="kenya-cyber-laws.html" class="active">Kenya Cyber Laws</a></li>
+      </ul>
+      <button id="themeToggle">🌓 Theme</button>
+    </aside>
+
   <main class="content container">
     <h1>Kenya Cyber Laws</h1>
     <p>Kenya's digital transformation journey has led to significant advancements in cyber law, designed to protect individuals, businesses, and national infrastructure. Understanding the legal framework is essential for ethical hackers, developers, IT professionals, and digital citizens. InfoSecKe presents this in-depth overview of the legal landscape governing cybersecurity in Kenya.</p>
@@ -124,56 +168,99 @@
     </section>
 
     <p>To stay compliant and proactive, InfoSecKe recommends regular training and keeping up with legal changes.</p>
-  </main>
+ 
+          <h1>🇰🇪 Kenya’s Cyber Laws Overview</h1>
+          <p>Kenya has made significant strides in establishing a strong legal and policy framework to address cybercrime, digital privacy, and data protection. Understanding these laws is crucial for individuals, businesses, and cybersecurity professionals operating in the region.</p>
 
-  <!-- Footer -->
-  <footer class="wrapper">
-    <div class="container">
-      <div>
-        <p>InfoSec Tools</p>
-        <a href="/tools/kali-tools.html">Top Kali Tools</a>
-        <a href="/tools/web-tools.html">Web Testing Tools</a>
-        <a href="/training/bug-bounty-path.html">Bug Bounty Path</a>
-        <a href="/cyber-range/">Cyber Labs</a>
-      </div>
-      <div>
-        <p>Threat Intelligence</p>
-        <a href="/threats/threats.html">Threat Categories</a>
-        <a href="/threats/threat-reports.html">Threat Reports</a>
-        <a href="/research/cyberlaws.html">Cyber Laws</a>
-        <a href="/threats/malware-types.html">Malware Types</a>
-        <a href="/threats/attack-vectors.html">Attack Vectors</a>
-      </div>
-      <div>
-        <p>Users</p>
-        <a href="/account/profile.html">Profile</a>
-        <a href="/account/settings.html">Settings</a>
-        <a href="/account/register.html">Register</a>
-        <a href="/account/login.html">Login</a>
-      </div>
-      <div>
-        <p>Company</p>
-        <a href="/about/mission.html">Our Mission</a>
-        <a href="/about/team.html">Team</a>
-        <a href="/about/partners.html">Partners</a>
-        <a href="/support/contact.html">Contact</a>
-        <a href="/legal/privacy.html">Privacy</a>
-      </div>
-      <div>
-        <p>Insights</p>
-        <a href="/learn/basics.html">Cyber Basics</a>
-        <a href="/training/courses.html">Courses</a>
-        <a href="/blog/">Blog</a>
-        <a href="/research/">Research</a>
-      </div>
-      <div>
-        <a href="/"><img src="/assets/images/logo.svg" alt="InfoSecKe Logo" class="footer-logo" /></a>
-        <a class="button-outline-blue-small camelcase" href="https://twitter.com/infosec_ke" rel="noreferrer" target="_blank">
-          <span class="icon-twitter"></span> Follow us
-        </a>
-        <p class="grey">&copy; 2025 InfoSecKe. Empowering Kenya’s Digital Defense.</p>
-      </div>
+          <h2>📜 Computer Misuse and Cybercrimes Act, 2018</h2>
+          <ul>
+            <li>Criminalizes unauthorized access, cyberbullying, fake news, identity theft, and more.</li>
+            <li>Empowers law enforcement to investigate and prosecute cyber offenses.</li>
+            <li><a href="https://www.kenyalaw.org/kl/fileadmin/pdfdownloads/Acts/ComputerMisuseandCybercrimesAct_No5of2018.pdf" target="_blank">View Full Act →</a></li>
+          </ul>
+
+          <h2>🔐 Data Protection Act, 2019</h2>
+          <ul>
+            <li>Governs how personal data is collected, stored, and shared.</li>
+            <li>Gives rights to data subjects and places duties on data controllers/processors.</li>
+            <li>Enforced by the Office of the Data Protection Commissioner (ODPC).</li>
+            <li><a href="https://www.odpc.go.ke" target="_blank">Visit ODPC Website →</a></li>
+          </ul>
+
+          <h2>⚖️ Key Regulatory Bodies</h2>
+          <ul>
+            <li><strong>ODPP:</strong> Office of the Director of Public Prosecutions – Prosecutes cybercrime cases.</li>
+            <li><strong>Communications Authority (CAK):</strong> Oversees ICT regulation and national cybersecurity strategy.</li>
+            <li><strong>NC4:</strong> National KE-CIRT/Coordination Centre – National cyber response team.</li>
+          </ul>
+
+          <h2>🎥 Watch: Kenya’s Cybercrime Framework Explained</h2>
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/0E6D_6S2v7M" title="Kenya Cyber Laws" frameborder="0" allowfullscreen></iframe>
+
+          <h2>📊 Case Examples in Kenya</h2>
+          <ul>
+            <li><strong>Huduma Namba Controversy:</strong> Privacy concerns raised during the national digital ID rollout.</li>
+            <li><strong>Equity Bank Hack (2020):</strong> Cyber fraud ring exploited SIM swaps and insider data access.</li>
+            <li><strong>Government Email Leaks:</strong> Phishing campaigns targeted ministries using spoofed gov domains.</li>
+          </ul>
+
+          <h2>📚 Resources & Guides</h2>
+          <ul>
+            <li><a href="https://www.ict.go.ke" target="_blank">Ministry of ICT</a></li>
+            <li><a href="https://www.ca.go.ke/consumer/national-ke-cirt/" target="_blank">Kenya Cyber Response Team (KE-CIRT)</a></li>
+            <li><a href="https://www.odpc.go.ke/resources" target="_blank">ODPC Publications & Guidelines</a></li>
+          </ul>
+
+          <h2>💡 Call to Action</h2>
+          <p>Are you compliant with Kenyan cyber laws? Start with a privacy audit and consult legal professionals for data handling procedures. Follow <a href="../blog/index.html">our blog</a> for updates on local cybersecurity news and compliance tips.</p>
+        </section>
+      </main>
+
+      <footer class="wrapper">
+        <div class="container">
+          <div>
+            <p>InfoSecKe</p>
+            <a href="../about/mission.html">Our Mission</a>
+            <a href="../about/team.html">Team</a>
+            <a href="../partners.html">Partners</a>
+          </div>
+          <div>
+            <p>Learn</p>
+            <a href="basics.html">Cybersecurity Basics</a>
+            <a href="encryption.html">Encryption</a>
+            <a href="web-security.html">Web Security</a>
+            <a href="kenya-cyber-laws.html">Kenya Cyber Laws</a>
+          </div>
+          <div>
+            <p>Training</p>
+            <a href="../training/courses.html">Courses</a>
+            <a href="../training/certifications.html">Certifications</a>
+            <a href="../cyber-range/">Cyber Range</a>
+          </div>
+          <div>
+            <p>Community</p>
+            <a href="../community/community.html">Community</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../support/contact.html">Contact</a>
+          </div>
+          <div>
+            <p>Legal</p>
+            <a href="../legal/privacy.html">Privacy Policy</a>
+            <a href="../legal/terms.html">Terms & Conditions</a>
+          </div>
+          <div>
+            <a href="../index.html"><img src="../assets/images/logo.svg" alt="InfoSecKe Logo" class="footer-logo"/></a>
+            <p class="grey">&copy; 2025 InfoSecKe. Cybersecurity for Kenya’s Digital Future.</p>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
+  </div>
+
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
